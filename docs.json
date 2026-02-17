@@ -1,19 +1,43 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Documentation",
+  "name": "Docs",
   "colors": {
     "primary": "#0D9373"
   },
   "navigation": {
     "groups": [
       {
-        "group": "Getting Started",
-        "icon": "play",
+        "group": "Untitled Product",
         "pages": [
-          "overview"
+          {
+            "group": "Getting Started",
+            "icon": "play",
+            "pages": [
+              "overview",
+              "creating-your-first-initiative"
+            ]
+          },
+          {
+            "group": "Change Impacts",
+            "icon": "angles-right",
+            "expanded": true,
+            "pages": [
+              "overview-1",
+              "adding"
+            ]
+          },
+          {
+            "group": "Stakeholders",
+            "pages": [
+              "overview-2"
+            ]
+          }
         ]
       }
     ]
+  },
+  "interaction": {
+    "drilldown": true
   }
 }
