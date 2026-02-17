@@ -1,29 +1,29 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "Leap Change",
   "logo": {
     "dark": "/logo/dark.svg",
     "light": "/logo/light.svg"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/favicon-16x16.png",
   "colors": {
-    "primary": "#0D9373",
-    "light": "#07C983",
-    "dark": "#0D9373",
+    "primary": "#6366f1",
+    "light": "#818cf8",
+    "dark": "#4f46e5",
     "anchors": {
-      "from": "#0D9373",
-      "to": "#07C983"
+      "from": "#6366f1",
+      "to": "#818cf8"
     }
   },
   "topbarLinks": [
     {
       "name": "Support",
-      "url": "mailto:hi@mintlify.com"
+      "url": "mailto:hello@leapchange.io"
     }
   ],
   "topbarCtaButton": {
-    "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
+    "name": "Open app",
+    "url": "https://leapchange.io/home"
   },
   "tabs": [
     {
@@ -33,22 +33,31 @@
   ],
   "anchors": [
     {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
+      "name": "Changelog",
+      "icon": "arrows-rotate",
+      "url": "https://leapchange.io/changelog"
     },
     {
-      "name": "Community",
-      "icon": "slack",
-      "url": "https://mintlify.com/community"
+      "name": "Documentation",
+      "icon": "book-open-cover",
+      "url": "https://leapchange.io"
+    },
+    {
+      "name": "Contact",
+      "icon": "envelope",
+      "url": "https://leapchange.io/contact"
     },
     {
       "name": "Blog",
       "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
+      "url": "https://leapchange.io/blog"
     }
   ],
   "navigation": [
+    {
+      "group": "Leap Change",
+      "pages": ["leap-change"]
+    },
     {
       "group": "Get Started",
       "pages": [
@@ -84,8 +93,8 @@
     }
   ],
   "footerSocials": {
-    "x": "https://x.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://linkedin.com/company/mintlify"
+    "x": "https://twitter.com/leapchange",
+    "github": "https://github.com/leapchange",
+    "linkedin": "https://linkedin.com/company/leapchange"
   }
 }
