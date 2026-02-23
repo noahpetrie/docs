@@ -1,14 +1,16 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Docs",
+  "theme": "luma",
+  "name": "Leap Change Docs",
   "colors": {
-    "primary": "#0D9373"
+    "primary": "#9f35f8",
+    "dark": "#a031e8",
+    "light": "#ae7ff3"
   },
   "navigation": {
     "groups": [
       {
-        "group": "Untitled Product",
+        "group": "Getting Started",
         "pages": [
           {
             "group": "Getting Started",
@@ -39,5 +41,9 @@
   },
   "interaction": {
     "drilldown": true
+  },
+  "logo": "/logo/light.svg",
+  "background": {
+    "decoration": "gradient"
   }
 }

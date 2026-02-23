@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" width="100%" height="100%">
+  <g>
+    <circle cx="30" cy="70" r="20" fill="#1A47D5" stroke="#FFFFFF" stroke-width="4" />
+    <circle cx="55" cy="50" r="20" fill="#1A47D5" stroke="#FFFFFF" stroke-width="4" />
+    <circle cx="80" cy="30" r="20" fill="#1A47D5" stroke="#FFFFFF" stroke-width="4" />
+  </g>
+  <text x="125" y="65" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="42" font-weight="700" fill="#1A47D5" letter-spacing="-1">LeapChange</text>
+</svg>
