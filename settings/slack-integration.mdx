@@ -1,0 +1,115 @@
+---
+title: Slack integration
+description: Connect Leap Change to your Slack workspace
+---
+
+Integrate Leap Change with Slack to send messages to stakeholders and receive notifications in your team channels.
+
+## Connecting Slack
+
+1. Go to **Settings** → **Integrations**
+2. Find the Slack section
+3. Click **Connect Slack**
+4. Sign in to your Slack workspace
+5. Authorize Leap Change to access Slack
+6. Select which channels to enable (optional)
+
+## Features
+
+### Direct messaging
+
+Send messages to stakeholders via Slack:
+
+1. Open a stakeholder profile
+2. Click **Send Slack Message**
+3. Compose your message
+4. Click **Send**
+
+Requirements:
+- Stakeholder must have a Slack account linked via email
+- Stakeholder must be in your Slack workspace
+
+### Channel notifications
+
+Receive notifications in Slack channels when:
+
+| Event | Description |
+|-------|-------------|
+| **Change impact created** | New impact logged |
+| **Survey launched** | Survey opened for responses |
+| **Project updated** | Project status changed |
+| **Communication due** | Activity approaching deadline |
+
+### Configuring notifications
+
+1. Go to **Settings** → **Integrations** → **Slack**
+2. Click **Configure Channels**
+3. For each channel, select which events trigger notifications
+4. Save your configuration
+
+## Channel selection
+
+Choose which Slack channels receive notifications:
+
+- **Public channels** - Any public channel in your workspace
+- **Private channels** - Channels where Leap Change bot is invited
+
+To use a private channel:
+1. Invite the Leap Change bot to the channel
+2. The channel will appear in the selection list
+
+## Message formatting
+
+Slack messages from Leap Change include:
+
+- Rich formatting with headers and sections
+- Action buttons to open items in Leap Change
+- User mentions when relevant
+- Timestamps and metadata
+
+## Sending survey invitations via Slack
+
+1. Create or open a survey
+2. Click **Send Invitations**
+3. Select **Slack** as the delivery method
+4. Choose recipients
+5. Customize the message
+6. Send
+
+Stakeholders receive a Slack message with a link to complete the survey.
+
+## Disconnecting Slack
+
+1. Go to **Settings** → **Integrations**
+2. Find the Slack section
+3. Click **Disconnect**
+4. Confirm disconnection
+
+Disconnecting:
+- Stops all notifications
+- Removes ability to send Slack messages
+- Does not delete historical data
+
+## Troubleshooting
+
+### Messages not delivering
+
+1. Verify the stakeholder's email matches their Slack account
+2. Check that the Leap Change bot has access to the user
+3. Ensure the user hasn't blocked the bot
+
+### Channel not appearing
+
+1. For private channels, invite the Leap Change bot first
+2. Refresh the channel list
+3. Check that you have permission to post in the channel
+
+### Bot permissions
+
+The Leap Change Slack app requests:
+
+- Send messages as bot
+- View channels and members
+- Send direct messages
+
+These permissions are required for full functionality.
