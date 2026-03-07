@@ -1,0 +1,165 @@
+---
+title: Slack integration
+description: Send notifications and messages through Slack
+icon: slack
+---
+
+Connect Leap Change to Slack to send notifications, communicate with stakeholders, and keep your team informed about change activities.
+
+## Features
+
+### Channel notifications
+
+Post automated notifications to Slack channels:
+
+- New change impacts created
+- Surveys launched
+- Project status updates
+- Communication activities completed
+
+### Direct messaging
+
+Send Slack messages to stakeholders:
+
+- Compose messages from stakeholder profiles
+- Send survey invitations
+- Share important updates
+
+### Event triggers
+
+Configure which events trigger notifications:
+
+| Event | Description |
+|-------|-------------|
+| Impact created | New change impact added |
+| Impact updated | Status or severity changed |
+| Survey launched | New survey opened for responses |
+| Survey closed | Survey no longer accepting responses |
+| Project updated | Project status or details changed |
+| Communication sent | Activity marked as completed |
+
+## Prerequisites
+
+- Slack workspace with admin access
+- Leap Change admin role
+- Permission to install Slack apps
+
+## Connecting Slack
+
+1. Go to **Settings** → **Integrations**
+2. Find **Slack** and click **Connect**
+3. Click **Add to Slack**
+4. Select your Slack workspace
+5. Review permissions and click **Allow**
+6. Configure notification settings
+
+### Permissions requested
+
+The Leap Change Slack app requests:
+
+| Permission | Purpose |
+|------------|----------|
+| Post to channels | Send notifications |
+| Send direct messages | Contact stakeholders |
+| Read user profiles | Match stakeholders to Slack users |
+
+## Configuring notifications
+
+### Selecting channels
+
+1. Go to **Settings** → **Integrations** → **Slack**
+2. Click **Configure Channels**
+3. Select channels for different notification types:
+   - General updates channel
+   - Project-specific channels
+   - Leadership updates channel
+4. Save your configuration
+
+### Event settings
+
+For each event type:
+
+1. Enable or disable notifications
+2. Select target channels
+3. Customize message format (optional)
+4. Set filters (e.g., only high-severity impacts)
+
+### Notification format
+
+Notifications include:
+
+- Event type indicator
+- Relevant details (title, description, severity)
+- Link to view in Leap Change
+- Actor who triggered the event
+
+## Sending messages
+
+### From stakeholder profiles
+
+1. Open a stakeholder's profile
+2. Click **Send Slack Message**
+3. Compose your message
+4. Click **Send**
+
+<Note>
+  The stakeholder must have a Slack email that matches their Leap Change email.
+</Note>
+
+### Bulk messaging
+
+1. Select stakeholders in the list view
+2. Click **Bulk Actions** → **Send Slack Message**
+3. Compose a single message
+4. Send to all selected stakeholders
+
+## Best practices
+
+<AccordionGroup>
+  <Accordion title="Use dedicated channels">
+    Create channels specifically for change management updates to avoid cluttering general channels.
+  </Accordion>
+  <Accordion title="Filter by severity">
+    Only notify for high-severity impacts to prevent notification fatigue.
+  </Accordion>
+  <Accordion title="Include context">
+    Ensure notification messages include enough context for recipients to understand the update.
+  </Accordion>
+  <Accordion title="Test before rollout">
+    Send test notifications to verify formatting and channel targeting.
+  </Accordion>
+</AccordionGroup>
+
+## Troubleshooting
+
+### Notifications not appearing
+
+- Verify the channel is selected for that event type
+- Check that the event filter criteria are met
+- Ensure the Slack app is still connected
+
+### Cannot find user
+
+- Confirm the stakeholder's email matches their Slack email
+- Check that the user is in the connected workspace
+- Verify the app has permission to message users
+
+### Connection expired
+
+1. Go to **Settings** → **Integrations** → **Slack**
+2. Click **Reconnect**
+3. Re-authorize the app in Slack
+
+## Disconnecting Slack
+
+To remove the integration:
+
+1. Go to **Settings** → **Integrations** → **Slack**
+2. Click **Disconnect**
+3. Confirm the action
+
+Optionally, also remove the Leap Change app from your Slack workspace:
+
+1. Go to Slack **Settings** → **Manage apps**
+2. Find Leap Change
+3. Click **Remove**
