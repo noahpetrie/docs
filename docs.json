@@ -3,9 +3,9 @@
   "theme": "luma",
   "name": "Leap Change Docs",
   "colors": {
-    "primary": "#9f35f8",
-    "dark": "#a031e8",
-    "light": "#ae7ff3"
+    "primary": "#0C8C5E",
+    "dark": "#086343",
+    "light": "#DDF3EA"
   },
   "navigation": {
     "groups": [
@@ -91,8 +91,9 @@
   "interaction": {
     "drilldown": true
   },
-  "logo": "/logo/light.svg",
+  "logo": "/images/LeapChange-Green1.svg",
   "background": {
     "decoration": "gradient"
-  }
+  },
+  "favicon": "/images/outline.png"
 }
