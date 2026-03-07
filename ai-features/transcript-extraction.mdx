@@ -1,0 +1,130 @@
+---
+title: Transcript extraction
+description: Automatically extract change impacts from meeting transcripts
+---
+
+Leap Change uses AI to analyze meeting transcripts and automatically identify potential change impacts, saving hours of manual analysis.
+
+## How it works
+
+1. **Upload** a meeting transcript
+2. **AI analyzes** the content for change-related statements
+3. **Review** suggested impacts with confidence scores
+4. **Accept** or modify suggestions to create impacts
+
+## Supported formats
+
+| Format | Source |
+|--------|--------|
+| **VTT** | Microsoft Teams, Zoom, WebEx |
+| **SRT** | Video subtitles |
+| **TXT** | Plain text transcripts |
+| **DOCX** | Word documents |
+| **PDF** | PDF transcripts |
+
+### Platform-specific formats
+
+- **Zoom** - Download VTT from recordings
+- **Teams** - Export transcript from meeting
+- **Webex** - Download from recording page
+- **Google Meet** - Copy transcript text
+- **Otter.ai** - Export as TXT or DOCX
+
+## Using transcript extraction
+
+### Step 1: Upload
+
+1. Go to **Change Impacts**
+2. Click **Import** → **From Transcript**
+3. Select your transcript file
+4. Choose the associated project
+5. Click **Upload**
+
+### Step 2: Processing
+
+Leap Change processes your transcript:
+
+- Identifies change-related statements
+- Extracts current and future state descriptions
+- Determines severity based on context
+- Groups related mentions
+- Checks for duplicates against existing impacts
+
+Processing time: 30-90 seconds depending on length.
+
+### Step 3: Review suggestions
+
+View extracted impacts:
+
+| Field | Description |
+|-------|-------------|
+| **Title** | AI-generated impact title |
+| **Description** | Extracted details from transcript |
+| **Current state** | How things work today |
+| **Future state** | How things will work after |
+| **Severity** | Suggested severity level |
+| **Confidence** | AI confidence percentage |
+| **Source quote** | Original transcript excerpt |
+
+### Step 4: Accept or reject
+
+For each suggestion:
+
+- **Accept** - Create the impact as-is
+- **Edit and accept** - Modify before creating
+- **Reject** - Discard the suggestion
+- **Mark as duplicate** - Link to existing impact
+
+## Confidence scores
+
+AI assigns confidence levels:
+
+| Confidence | Meaning |
+|------------|-------|
+| **High (80%+)** | Clear change statement, high accuracy |
+| **Medium (50-79%)** | Likely change impact, review recommended |
+| **Low (<50%)** | Possible impact, careful review needed |
+
+## Duplicate detection
+
+Leap Change automatically:
+
+- Compares extractions to existing impacts
+- Flags potential duplicates
+- Shows similarity percentage
+- Lets you merge or create separately
+
+## Tips for better results
+
+<AccordionGroup>
+  <Accordion title="Use high-quality transcripts">
+    Automated transcription works best with clear audio. Clean up obvious errors before uploading.
+  </Accordion>
+  <Accordion title="Include context in meetings">
+    Phrases like "this change will affect..." or "the impact on..." help AI identify impacts.
+  </Accordion>
+  <Accordion title="Select the right project">
+    Associating with the correct project improves duplicate detection and relevance.
+  </Accordion>
+  <Accordion title="Review all suggestions">
+    AI may miss context - always review before accepting.
+  </Accordion>
+  <Accordion title="Use source quotes">
+    Reference source quotes when discussing impacts with stakeholders.
+  </Accordion>
+</AccordionGroup>
+
+## Usage tracking
+
+Transcript extraction uses your AI quota:
+
+- Quota consumed based on transcript length
+- Track usage in **Settings** → **AskLeap Usage**
+- Longer transcripts use more quota
+
+## Limitations
+
+- Maximum file size: 10MB
+- Maximum transcript length: ~2 hours of content
+- Best results with English transcripts
+- May miss subtle or implied changes

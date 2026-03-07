@@ -1,0 +1,185 @@
+---
+title: Microsoft Teams integration
+description: Send messages and monitor channels with Teams
+---
+
+Connect Leap Change to Microsoft Teams to communicate with stakeholders directly and monitor channels for change-related discussions.
+
+## Overview
+
+Teams integration enables:
+
+- **Direct messaging** - Send 1:1 messages to stakeholders
+- **Survey delivery** - Distribute surveys via adaptive cards
+- **Channel monitoring** - Track discussions in Teams channels
+- **Bot notifications** - Proactive messages and alerts
+
+## Connecting
+
+### Prerequisites
+
+- Microsoft Teams enabled in your tenant
+- Admin consent for Teams permissions
+- Stakeholders with Teams accounts
+
+### Setup steps
+
+1. Go to **Settings** → **Integrations**
+2. Click **Connect Microsoft Teams**
+3. Sign in with your Microsoft account
+4. Grant requested permissions
+5. Configure integration settings
+
+## Direct messaging
+
+### Sending messages
+
+Send messages to individual stakeholders:
+
+1. Open a stakeholder profile
+2. Click **Send Teams Message**
+3. Compose your message
+4. Click **Send**
+
+### From communication activities
+
+Use Teams for communication activities:
+
+1. Create a communication activity
+2. Set channel to **Microsoft Teams**
+3. Select target stakeholders
+4. Schedule or send immediately
+
+### Message features
+
+- Rich text formatting
+- Merge fields (stakeholder name, department, etc.)
+- Attachments and links
+- Delivery confirmation
+
+## Survey delivery
+
+Send surveys through Teams adaptive cards:
+
+1. Create a survey
+2. Go to **Send Invitations**
+3. Select **Microsoft Teams** as delivery method
+4. Choose recipients
+5. Send
+
+Stakeholders receive an interactive card:
+
+- Survey question displayed inline
+- Response buttons for ratings
+- Link to full survey if needed
+- Responses tracked automatically
+
+## Channel monitoring
+
+Monitor Teams channels for change-related discussions.
+
+### Setting up monitoring
+
+1. Go to **Settings** → **Integrations** → **Teams**
+2. Click **Configure Channels**
+3. Select teams and channels to monitor
+4. Enable monitoring
+
+### How it works
+
+- Leap Change subscribes to channel messages
+- Messages are analyzed for change keywords
+- Relevant discussions surface in the platform
+- Use insights to inform your change strategy
+
+### Historical sync
+
+Backfill historical messages:
+
+1. Select a channel
+2. Click **Sync History**
+3. Choose date range
+4. Messages are imported for analysis
+
+## Teams bot
+
+The Leap Change bot provides interactive capabilities.
+
+### Bot features
+
+- **Proactive notifications** - Send alerts to stakeholders
+- **Interactive surveys** - Respond to surveys in Teams
+- **Quick queries** - Look up change information
+- **Status updates** - Receive project updates
+
+### Installing the bot
+
+1. Download the Teams app manifest from Settings
+2. Upload to your Teams Admin Center
+3. Deploy to users or allow self-service install
+4. Users add the Leap Change app to Teams
+
+### Bot commands
+
+Users can interact with the bot:
+
+| Command | Action |
+|---------|--------|
+| `/help` | Show available commands |
+| `/status` | View current change initiatives |
+| `/feedback` | Submit feedback on changes |
+
+## Message log
+
+Track all Teams messages sent:
+
+1. Go to **Settings** → **Integrations** → **Teams**
+2. Click **Message Log**
+3. View:
+   - Recipient
+   - Message content
+   - Delivery status
+   - Timestamp
+
+## Troubleshooting
+
+### Connection issues
+
+| Problem | Solution |
+|---------|----------|
+| Can't connect | Verify Teams is enabled in your tenant |
+| Permission denied | Ensure admin consent for Teams permissions |
+| Token expired | Reconnect the integration |
+
+### Messaging issues
+
+| Problem | Solution |
+|---------|----------|
+| Message not delivered | Verify stakeholder has Teams account |
+| Bot not responding | Check bot installation in Teams |
+| Card not rendering | Update Teams client to latest version |
+
+### Monitoring issues
+
+| Problem | Solution |
+|---------|----------|
+| Channel not syncing | Verify channel permissions |
+| Missing messages | Check subscription status |
+| Delayed updates | Subscriptions renew every hour |
+
+## Best practices
+
+<AccordionGroup>
+  <Accordion title="Use Teams for urgent communications">
+    Teams messages have higher visibility than email for time-sensitive updates.
+  </Accordion>
+  <Accordion title="Personalize messages">
+    Use merge fields to address stakeholders by name and reference their department.
+  </Accordion>
+  <Accordion title="Monitor key project channels">
+    Set up monitoring on channels where change discussions happen.
+  </Accordion>
+  <Accordion title="Combine with surveys">
+    Send survey reminders via Teams for higher response rates.
+  </Accordion>
+</AccordionGroup>

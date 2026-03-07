@@ -1,0 +1,187 @@
+---
+title: Microsoft Entra ID integration
+description: Sync users from Azure AD as stakeholders
+---
+
+Connect Leap Change to Microsoft Entra ID (formerly Azure AD) to automatically import and sync users as stakeholders.
+
+## Overview
+
+Entra ID integration enables:
+
+- **User sync** - Import directory users as stakeholders
+- **Delta sync** - Efficient incremental updates
+- **Group filtering** - Import specific groups only
+- **Manager sync** - Preserve reporting relationships
+- **Photo sync** - Import profile photos
+- **Attribute mapping** - Map Entra fields to stakeholder properties
+
+## Connecting
+
+### Prerequisites
+
+- Microsoft 365 with Entra ID
+- Global Administrator or Application Administrator role
+- Leap Change organization admin access
+
+### Setup steps
+
+1. Go to **Settings** → **Integrations**
+2. Click **Connect Microsoft 365**
+3. Sign in with your Microsoft admin account
+4. Review requested permissions
+5. Click **Accept** to grant consent
+6. Return to Leap Change
+
+## Configuration
+
+### Sync frequency
+
+Choose how often to sync:
+
+| Frequency | Description |
+|-----------|-------------|
+| **Manual** | Sync only when you click the button |
+| **Daily** | Automatic sync once per day |
+| **Twice daily** | Sync morning and evening |
+| **Weekly** | Sync once per week |
+
+### Merge strategy
+
+When a synced user already exists as a stakeholder:
+
+| Strategy | Behavior |
+|----------|----------|
+| **Entra wins** | Microsoft data overwrites Leap Change data |
+| **Leap wins** | Preserve local edits, ignore Entra changes |
+| **Skip conflicts** | Don't update records with local changes |
+
+### Group filtering
+
+Limit sync to specific Entra groups:
+
+1. Click **Configure Groups**
+2. Search and select groups to include
+3. Only members of selected groups will sync
+4. Save configuration
+
+<Tip>
+  Use security groups to control which users sync. Create a "Change Stakeholders" group in Entra and add relevant users.
+</Tip>
+
+### Group sync
+
+Optionally sync Entra groups as stakeholder groups:
+
+1. Enable **Sync Groups**
+2. Select groups to sync
+3. Groups are created in Leap Change
+4. Membership updates automatically
+
+## Attribute mapping
+
+Entra attributes map to stakeholder fields:
+
+| Entra attribute | Stakeholder field |
+|-----------------|------------------|
+| displayName | Name |
+| mail | Email |
+| jobTitle | Role |
+| department | Department |
+| officeLocation | Location |
+| city | City |
+| country | Country |
+| manager | Manager relationship |
+| employeeId | External ID |
+
+### Extended attributes
+
+Additional mapped fields:
+
+- Preferred language
+- Employee type
+- Hire date
+- State/Province
+- Street address
+- Postal code
+
+## Running syncs
+
+### Manual sync
+
+1. Go to **Settings** → **Integrations**
+2. Find Microsoft 365 integration
+3. Click **Sync Now**
+4. Monitor progress in the sync log
+
+### Viewing sync results
+
+After sync completes:
+
+- **Users synced** - Number of stakeholders created/updated
+- **Users deactivated** - Removed from Entra
+- **Errors** - Issues encountered
+- **Duration** - How long sync took
+
+### Sync log
+
+View detailed sync history:
+
+1. Click **View Sync Log**
+2. See each sync with:
+   - Timestamp
+   - Records processed
+   - Errors if any
+   - Delta token used
+
+## Soft deactivation
+
+When users are removed from Entra:
+
+- Stakeholder is marked inactive (not deleted)
+- Historical data preserved
+- Can be reactivated if user returns
+
+## Troubleshooting
+
+### Connection issues
+
+| Problem | Solution |
+|---------|----------|
+| Connection fails | Verify admin credentials and try again |
+| Token expired | Reconnect the integration |
+| Permission denied | Ensure admin consent was granted |
+
+### Sync issues
+
+| Problem | Solution |
+|---------|----------|
+| Users not syncing | Check group filter configuration |
+| Wrong data | Review merge strategy setting |
+| Missing photos | Verify User.Read.All permission |
+| Rate limited | Reduce sync frequency |
+
+### Re-authorizing
+
+If tokens expire:
+
+1. Go to **Settings** → **Integrations**
+2. Click **Reconnect**
+3. Complete the OAuth flow again
+
+## Best practices
+
+<AccordionGroup>
+  <Accordion title="Start with a test group">
+    Create a small test group in Entra and sync that first. Verify results before syncing all users.
+  </Accordion>
+  <Accordion title="Use Entra wins for clean data">
+    If Entra is your source of truth, use "Entra wins" to keep stakeholder data current.
+  </Accordion>
+  <Accordion title="Schedule syncs during off-hours">
+    Daily syncs run fastest during low-usage periods.
+  </Accordion>
+  <Accordion title="Monitor sync logs regularly">
+    Check for errors after syncs to catch issues early.
+  </Accordion>
+</AccordionGroup>
