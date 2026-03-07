@@ -115,6 +115,62 @@ The Leap Change bot can:
 - Send scheduled notifications
 - Support interactive workflows
 
+## Slack
+
+Connect Slack to send notifications and map stakeholders to their Slack accounts.
+
+### Connecting
+
+1. Go to **Settings** → **Integrations**
+2. Find the Slack integration card
+3. Click **Connect**
+4. Authorize Leap Change in your Slack workspace
+5. Connection is established
+
+<Note>
+  You must be a Slack workspace admin to connect the integration.
+</Note>
+
+### Notification channels
+
+Configure which Slack channels receive Leap Change notifications:
+
+1. After connecting, select channels from the list
+2. Choose which event types to send to each channel:
+   - **Change impact created** - New impacts are logged
+   - **Survey launched** - A survey is sent to stakeholders
+   - **Project updated** - Project status or details change
+
+You can enable notifications on multiple channels with different event types.
+
+### Stakeholder mapping
+
+Link stakeholders to their Slack accounts for direct messaging:
+
+1. Click **Sync stakeholders**
+2. Leap Change matches stakeholder emails to Slack users
+3. View sync results:
+   - **Matched** - Successfully linked
+   - **Already mapped** - Previously linked
+   - **Unmatched** - No Slack user found with that email
+
+Once mapped, you can send messages to stakeholders directly through Slack.
+
+### Disconnecting
+
+1. Click **Disconnect** on the Slack integration card
+2. Confirm the disconnection
+3. All channel notifications stop immediately
+4. Stakeholder mappings are preserved
+
+## Jira
+
+<Info>
+  Jira integration is coming soon.
+</Info>
+
+Connect Jira to sync change management tasks with your project management workflows.
+
 ## Troubleshooting
 
 ### Connection issues
@@ -122,11 +178,11 @@ The Leap Change bot can:
 If integration fails:
 
 1. Check admin permissions
-2. Verify network access to Microsoft services
+2. Verify network access to the service
 3. Re-authorize if tokens expired
 4. Contact support if issues persist
 
-### Sync errors
+### Microsoft sync errors
 
 Common sync issues:
 
@@ -136,3 +192,11 @@ Common sync issues:
 | Permission denied | Check app permissions in Azure |
 | Rate limited | Wait and retry automatically |
 | Invalid data | Check user profile completeness |
+
+### Slack sync errors
+
+| Error | Solution |
+|-------|----------|
+| No matching user | Stakeholder email doesn't match any Slack user |
+| Channel not found | Channel may have been deleted or made private |
+| Rate limited | Wait and retry automatically |
