@@ -18,10 +18,8 @@
         ]
       },
       {
-        "group": "Features",
+        "group": "Projects",
         "pages": [
-          "getting-started/introduction",
-          "getting-started/quickstart",
           "getting-started/first-project"
         ]
       },
