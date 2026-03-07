@@ -14,15 +14,23 @@
         "pages": [
           "getting-started/introduction",
           "getting-started/quickstart",
+          "getting-started/first-project",
           "getting-started/concepts"
         ]
       },
       {
         "group": "Features",
         "pages": [
-          "getting-started/introduction",
-          "getting-started/quickstart",
-          "getting-started/first-project"
+          "features/dashboard",
+          "features/projects",
+          "features/programs",
+          "features/stakeholders",
+          "features/change-impacts",
+          "features/surveys",
+          "features/communications",
+          "features/tasks",
+          "features/reports",
+          "features/ai-assistant"
         ]
       },
       {
