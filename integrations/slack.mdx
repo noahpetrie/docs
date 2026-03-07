@@ -1,0 +1,173 @@
+---
+title: Slack integration
+description: Connect your Slack workspace for notifications and stakeholder communication
+icon: slack
+---
+
+Connect Leap Change to Slack to send notifications, map stakeholders to Slack users, and keep your team informed about change activities.
+
+## Overview
+
+The Slack integration provides:
+
+- **Workspace connection** - Link your Slack workspace
+- **Stakeholder mapping** - Match Slack users to stakeholders by email
+- **Channel notifications** - Post updates to Slack channels
+- **Event automation** - Trigger notifications on key events
+
+## Prerequisites
+
+Before connecting:
+
+- Slack workspace with admin access (or permission to install apps)
+- Organization admin role in Leap Change
+
+## Connecting Slack
+
+1. Go to **Settings** → **Integrations**
+2. Find Slack and click **Connect**
+3. Sign in to your Slack workspace
+4. Authorize the Leap Change app
+5. Select a default notification channel (optional)
+
+### Permissions requested
+
+| Permission | Purpose |
+|------------|---------|
+| channels:read | List available channels |
+| chat:write | Post messages to channels |
+| users:read | Map users to stakeholders |
+| users:read.email | Match users by email address |
+
+## Stakeholder mapping
+
+Link Slack users to stakeholders for direct communication:
+
+1. Go to **Settings** → **Integrations** → **Slack**
+2. Click **Sync Stakeholders**
+3. Users are matched by email address
+4. Matched stakeholders show their Slack user ID
+
+### Manual mapping
+
+If automatic matching fails:
+
+1. Open the stakeholder profile
+2. Find the Slack field
+3. Enter their Slack user ID manually
+4. Save changes
+
+### Finding Slack user IDs
+
+1. In Slack, click on a user's profile
+2. Click the "More" button (three dots)
+3. Select "Copy member ID"
+
+## Channel notifications
+
+Configure channels to receive automated notifications.
+
+### Setting up notifications
+
+1. Go to **Settings** → **Integrations** → **Slack** → **Notification Channels**
+2. Click **Add Channel**
+3. Select a Slack channel
+4. Choose which events trigger notifications
+5. Save the configuration
+
+### Available event types
+
+| Event | Description |
+|-------|-------------|
+| Change impact created | New impact added to a project |
+| Survey launched | Survey opened for responses |
+| Project updated | Project status or details changed |
+| Task completed | Task marked as done |
+| Milestone reached | Project milestone achieved |
+
+### Notification format
+
+Notifications include:
+
+- Event type and timestamp
+- Relevant details (project name, impact title, etc.)
+- Link back to Leap Change
+
+## Sending messages
+
+### To channels
+
+Post messages to Slack channels:
+
+1. From a communication activity
+2. Select Slack as the delivery channel
+3. Choose the target channel
+4. Compose and send the message
+
+### Direct messages
+
+Send DMs to stakeholders with mapped Slack accounts:
+
+1. Open the stakeholder profile
+2. Click the Slack icon
+3. Compose your message
+4. Send directly to their Slack DM
+
+<Note>
+  Direct messages require the stakeholder to have a mapped Slack user ID.
+</Note>
+
+## Message logging
+
+All Slack messages sent from Leap Change are logged:
+
+- View sent messages in communication activity history
+- Track delivery status
+- Audit communication touchpoints
+
+## Managing the integration
+
+### Updating configuration
+
+1. Go to **Settings** → **Integrations** → **Slack**
+2. Modify notification channels or settings
+3. Save changes
+
+### Re-authorizing
+
+If the connection expires:
+
+1. Click **Reconnect** in the Slack integration panel
+2. Sign in and re-authorize
+3. Existing configuration is preserved
+
+## Disconnecting Slack
+
+To disconnect:
+
+1. Go to **Settings** → **Integrations**
+2. Find Slack
+3. Click **Disconnect**
+4. Confirm the action
+
+<Warning>
+  Disconnecting stops all Slack notifications and messaging. Stakeholder Slack mappings are preserved but inactive.
+</Warning>
+
+## Troubleshooting
+
+### Connection issues
+
+| Issue | Solution |
+|-------|----------|
+| Cannot install app | Request workspace admin approval |
+| Authorization failed | Re-authorize with correct workspace |
+| Channel not found | Verify channel exists and bot is a member |
+
+### Message delivery
+
+| Issue | Solution |
+|-------|----------|
+| Message not sent | Check channel permissions |
+| Bot not in channel | Invite @LeapChange bot to the channel |
+| DM failed | Verify stakeholder Slack mapping |
