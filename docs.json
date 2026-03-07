@@ -12,29 +12,78 @@
       {
         "group": "Getting Started",
         "pages": [
-          {
-            "group": "Getting Started",
-            "icon": "play",
-            "pages": [
-              "overview",
-              "creating-your-first-initiative"
-            ]
-          },
-          {
-            "group": "Change Impacts",
-            "icon": "angles-right",
-            "expanded": true,
-            "pages": [
-              "overview-1",
-              "adding"
-            ]
-          },
-          {
-            "group": "Stakeholders",
-            "pages": [
-              "overview-2"
-            ]
-          }
+          "getting-started/introduction",
+          "getting-started/quickstart",
+          "getting-started/first-project"
+        ]
+      },
+      {
+        "group": "Stakeholders",
+        "pages": [
+          "stakeholders/overview",
+          "stakeholders/adding-stakeholders",
+          "stakeholders/groups",
+          "stakeholders/engagement",
+          "stakeholders/bulk-operations"
+        ]
+      },
+      {
+        "group": "Change Impacts",
+        "pages": [
+          "change-impacts/overview",
+          "change-impacts/creating-impacts",
+          "change-impacts/mitigation",
+          "change-impacts/ai-extraction"
+        ]
+      },
+      {
+        "group": "Surveys",
+        "pages": [
+          "surveys/overview",
+          "surveys/creating-surveys",
+          "surveys/sending-invitations",
+          "surveys/analyzing-results",
+          "surveys/readiness-scoring"
+        ]
+      },
+      {
+        "group": "Communications",
+        "pages": [
+          "communications/overview",
+          "communications/creating-plans",
+          "communications/adding-activities",
+          "communications/tracking"
+        ]
+      },
+      {
+        "group": "Tasks",
+        "pages": [
+          "tasks/overview"
+        ]
+      },
+      {
+        "group": "Reports",
+        "pages": [
+          "reports/overview",
+          "reports/impact-report",
+          "reports/stakeholder-map",
+          "reports/stakeholder-impact",
+          "reports/communication-preferences"
+        ]
+      },
+      {
+        "group": "AI Features",
+        "pages": [
+          "ai-features/overview"
+        ]
+      },
+      {
+        "group": "Settings",
+        "pages": [
+          "settings/overview",
+          "settings/integrations",
+          "settings/team-management",
+          "settings/billing"
         ]
       }
     ]

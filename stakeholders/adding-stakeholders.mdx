@@ -1,0 +1,79 @@
+---
+title: Adding stakeholders
+description: Import or manually add stakeholders to Leap Change
+---
+
+You can add stakeholders to Leap Change individually or in bulk.
+
+## Manual entry
+
+1. Navigate to **Stakeholders** in the sidebar
+2. Click **Add Stakeholder**
+3. Complete the form:
+
+| Field | Required | Description |
+|-------|----------|-------------|
+| First name | Yes | Stakeholder's first name |
+| Last name | Yes | Stakeholder's last name |
+| Email | No | Contact email address |
+| Phone | No | Phone number |
+| Department | No | Business department |
+| Role | No | Job title or role |
+| Location | No | Office location |
+| Influence | No | Low, Medium, or High |
+| Support level | No | Current stance on change |
+
+4. Click **Save** to create the stakeholder
+5. Optionally assign to projects immediately
+
+## CSV import
+
+For bulk import, prepare a CSV file with your stakeholder data.
+
+### CSV format
+
+Your CSV should include headers matching Leap Change fields:
+
+```csv
+first_name,last_name,email,department,role,location,influence,support_level
+John,Smith,john.smith@example.com,Finance,Manager,New York,High,Supportive
+Jane,Doe,jane.doe@example.com,HR,Director,London,Medium,Neutral
+```
+
+### Import steps
+
+1. Go to **Stakeholders**
+2. Click **Import** → **CSV**
+3. Upload your CSV file
+4. **Map columns** - Match CSV columns to Leap Change fields
+5. **Preview** - Review the data to be imported
+6. **Import** - Confirm to create stakeholders
+
+<Warning>
+  Duplicates are detected by email address. Existing stakeholders with matching emails will be updated, not duplicated.
+</Warning>
+
+## Microsoft 365 sync
+
+If you have Microsoft 365 integration enabled, you can sync users from your organization:
+
+1. Go to **Settings** → **Integrations**
+2. Connect your Microsoft 365 account
+3. Configure sync settings:
+   - **Merge strategy** - How to handle conflicts
+   - **Sync frequency** - Manual, daily, or weekly
+   - **Filter by groups** - Sync specific Entra groups
+
+See [Microsoft 365 integration](/settings/integrations#microsoft-365) for details.
+
+## Assigning to projects
+
+After creating stakeholders, link them to relevant projects:
+
+1. Open the stakeholder profile
+2. Go to the **Projects** tab
+3. Click **Assign to Project**
+4. Select one or more projects
+5. Save changes
+
+Alternatively, use bulk operations to assign multiple stakeholders to a project at once.

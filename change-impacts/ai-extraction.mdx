@@ -1,0 +1,76 @@
+---
+title: AI impact extraction
+description: Automatically extract change impacts from meeting transcripts
+---
+
+Leap Change uses AI to analyze meeting transcripts and automatically identify potential change impacts. This saves time and ensures you don't miss important impacts mentioned in discussions.
+
+## Supported formats
+
+Upload transcripts in these formats:
+
+- **VTT** - Web Video Text Tracks (from Teams, Zoom, etc.)
+- **DOCX** - Word documents
+- **TXT** - Plain text files
+- **PDF** - PDF documents
+
+## Extraction process
+
+### Step 1: Upload transcript
+
+1. Go to **Change Impacts**
+2. Click **Import** → **From Transcript**
+3. Select your transcript file
+4. Choose the associated project
+
+### Step 2: AI analysis
+
+Leap Change processes your transcript and:
+
+- Identifies statements about changes
+- Extracts current and future state descriptions
+- Suggests severity levels
+- Groups related mentions
+
+This typically takes 30-60 seconds depending on transcript length.
+
+### Step 3: Review suggestions
+
+You'll see a list of suggested impacts:
+
+- **Title** - AI-generated title
+- **Description** - Extracted details
+- **Confidence** - How confident the AI is in the extraction
+- **Source quote** - The transcript excerpt that triggered the suggestion
+
+### Step 4: Accept or reject
+
+For each suggestion:
+
+- **Accept** - Creates the impact with the suggested details
+- **Edit and accept** - Modify details before creating
+- **Reject** - Discard the suggestion
+- **Merge** - Combine with an existing impact
+
+## Tips for better extraction
+
+<AccordionGroup>
+  <Accordion title="Use clear meeting transcripts">
+    Automated transcription works best when speakers are clear. Manual cleanup of obvious errors improves results.
+  </Accordion>
+  <Accordion title="Include context in discussions">
+    Mentioning "this change will affect..." or "the impact on..." helps the AI identify impacts.
+  </Accordion>
+  <Accordion title="Review all suggestions">
+    AI may suggest duplicates or miss context—always review before accepting.
+  </Accordion>
+  <Accordion title="Provide project context">
+    Selecting the correct project helps the AI filter relevant impacts.
+  </Accordion>
+</AccordionGroup>
+
+## Usage tracking
+
+AI extraction uses your organization's AI quota. Track usage in **Settings** → **AskLeap Usage**.
+
+See [AI features overview](/ai-features/overview) for more on AI capabilities.
