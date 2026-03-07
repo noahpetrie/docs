@@ -79,7 +79,7 @@ The integration page shows:
 
 ## Microsoft Teams
 
-Send messages and monitor Teams channels for change-related discussions.
+Send messages, distribute surveys, and monitor Teams channels for change-related discussions.
 
 ### Connecting
 
@@ -94,9 +94,18 @@ Send messages and monitor Teams channels for change-related discussions.
 
 Send messages to stakeholders via Teams:
 
-- From stakeholder profiles
+- From stakeholder profiles, click **Send Teams Message**
 - As part of communication activities
 - For survey invitations
+
+#### Survey distribution
+
+Send surveys directly to stakeholders via Teams:
+
+1. Create a survey
+2. Click **Send via Teams**
+3. Select recipients
+4. Stakeholders receive a Teams message with the survey link
 
 #### Channel monitoring
 
@@ -106,6 +115,21 @@ Monitor channels for change-related discussions:
 - Receive notifications when mentioned
 - Capture insights for impact analysis
 
+#### Notification channels
+
+Configure Teams channels for automatic notifications:
+
+- **Change impact created** - Notify when new impacts are logged
+- **Survey launched** - Announce new surveys
+- **Project updated** - Share project status changes
+
+To configure:
+
+1. Go to **Settings** → **Integrations** → **Microsoft Teams**
+2. Click **Configure Notifications**
+3. Select channels for each notification type
+4. Save settings
+
 ### Teams bot
 
 The Leap Change bot can:
@@ -114,6 +138,69 @@ The Leap Change bot can:
 - Provide stakeholder lookup
 - Send scheduled notifications
 - Support interactive workflows
+
+## Slack
+
+Connect Slack to send messages and surveys to stakeholders through their preferred workspace.
+
+### Connecting
+
+1. Go to **Settings** → **Integrations**
+2. Find **Slack** and click **Connect**
+3. Select your Slack workspace
+4. Authorize Leap Change to access your workspace
+5. Connection is established
+
+### Required permissions
+
+The Slack integration requests:
+
+- Send messages to users
+- Post to channels
+- View user profiles
+
+### Features
+
+#### Direct messages
+
+Send messages to stakeholders via Slack:
+
+- From stakeholder profiles, click **Send Slack Message**
+- As part of survey invitations
+- For change notifications
+
+#### Survey distribution
+
+Send surveys directly to stakeholders via Slack:
+
+1. Create a survey
+2. Click **Send via Slack**
+3. Select recipients
+4. Stakeholders receive a direct message with the survey link
+
+#### Notification channels
+
+Configure channels for automatic notifications:
+
+- **Change impact created** - Notify when new impacts are logged
+- **Survey launched** - Announce new surveys
+- **Project updated** - Share project status changes
+
+To configure:
+
+1. Go to **Settings** → **Integrations** → **Slack**
+2. Click **Configure Notifications**
+3. Select channels for each notification type
+4. Save settings
+
+#### Stakeholder mapping
+
+Map Slack users to stakeholders for seamless messaging:
+
+1. Go to **Slack Settings** → **User Mapping**
+2. Leap Change automatically matches by email
+3. Manually map users that weren't auto-matched
+4. Save mappings
 
 ## Troubleshooting
 
@@ -136,3 +223,11 @@ Common sync issues:
 | Permission denied | Check app permissions in Azure |
 | Rate limited | Wait and retry automatically |
 | Invalid data | Check user profile completeness |
+
+### Slack issues
+
+| Error | Solution |
+|-------|----------|
+| User not in workspace | Ensure stakeholder email matches Slack user |
+| Channel not found | Re-authorize and select channels again |
+| Message failed | Check Slack user has not blocked the bot |
