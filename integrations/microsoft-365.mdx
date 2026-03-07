@@ -1,0 +1,139 @@
+---
+title: Microsoft 365 / Entra ID
+description: Sync users from Microsoft Entra ID as stakeholders
+---
+
+Connect Leap Change to Microsoft 365 to automatically sync users from Azure Active Directory (now Entra ID) as stakeholders.
+
+## Connecting
+
+<Steps>
+  <Step title="Access integrations">
+    Go to **Settings** → **Integrations** and find Microsoft 365.
+  </Step>
+  <Step title="Authorize">
+    Click **Connect** and sign in with a Microsoft admin account.
+  </Step>
+  <Step title="Grant permissions">
+    Review and approve the requested permissions.
+  </Step>
+  <Step title="Configure sync">
+    Set up sync frequency, merge strategy, and group filtering.
+  </Step>
+</Steps>
+
+## Required permissions
+
+The integration requests these Microsoft Graph permissions:
+
+| Permission | Purpose |
+|------------|----------|
+| User.Read.All | Read user profiles |
+| Group.Read.All | Read group memberships |
+| GroupMember.Read.All | Sync group members |
+| Mail.Send | Send email notifications |
+
+<Warning>
+  Admin consent may be required depending on your organization's Azure AD policies. Contact your IT administrator if you can't grant permissions.
+</Warning>
+
+## Sync configuration
+
+### Sync frequency
+
+Choose how often stakeholder data syncs:
+
+| Option | Description |
+|--------|-------------|
+| Manual | Sync only when you click the button |
+| Daily | Automatic sync once per day |
+| Twice daily | Sync morning and evening |
+| Weekly | Sync once per week |
+
+### Merge strategy
+
+Control what happens when a synced user already exists in Leap Change:
+
+| Strategy | Behavior |
+|----------|----------|
+| **Entra wins** | Microsoft data overwrites Leap Change data |
+| **Leap wins** | Preserve existing Leap Change data |
+| **Skip conflicts** | Don't update conflicting records |
+
+### Group filtering
+
+Limit sync to specific Entra ID groups:
+
+1. Click **Configure groups**
+2. Select groups to include
+3. Only members of selected groups will sync as stakeholders
+
+Leave empty to sync all users.
+
+### Group sync
+
+Optionally sync Entra groups as stakeholder groups:
+
+- Creates matching groups in Leap Change
+- Maintains membership automatically
+- Updates on each sync cycle
+
+## Synced fields
+
+The following user properties sync from Entra ID:
+
+- Display name
+- Email address
+- Phone number
+- Job title
+- Department
+- Office location
+- Manager
+- Photo URL
+- External ID (Entra object ID)
+
+## Delta sync and deactivation
+
+Leap Change uses delta sync to efficiently update changes:
+
+- Only changed users are processed
+- Deleted users are soft-deactivated (not removed)
+- Reactivated users automatically restore
+
+## Viewing sync status
+
+The integration page shows:
+
+- **Last sync**: When sync last ran
+- **Records synced**: Number of users processed
+- **Errors**: Any issues encountered
+- **Sync history**: Log of past syncs
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Permission denied">
+    Verify your account has admin permissions in Azure AD. You may need to request admin consent from your IT team.
+  </Accordion>
+  <Accordion title="Users not syncing">
+    Check group filtering settings. If groups are configured, only members of those groups sync.
+  </Accordion>
+  <Accordion title="Stale data">
+    Trigger a manual sync or check that automatic sync is enabled and running.
+  </Accordion>
+  <Accordion title="Rate limited">
+    Microsoft Graph has rate limits. Syncs will automatically retry. For large organizations, consider less frequent sync schedules.
+  </Accordion>
+</AccordionGroup>
+
+## Disconnecting
+
+To disconnect the integration:
+
+1. Go to **Settings** → **Integrations**
+2. Click **Disconnect** on Microsoft 365
+3. Confirm the disconnection
+
+<Note>
+  Disconnecting stops future syncs but preserves existing stakeholder data in Leap Change.
+</Note>

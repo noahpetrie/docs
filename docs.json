@@ -14,15 +14,21 @@
         "pages": [
           "getting-started/introduction",
           "getting-started/quickstart",
+          "getting-started/first-project",
           "getting-started/concepts"
         ]
       },
       {
         "group": "Features",
         "pages": [
-          "getting-started/introduction",
-          "getting-started/quickstart",
-          "getting-started/first-project"
+          "features/projects",
+          "features/stakeholders",
+          "features/change-impacts",
+          "features/surveys",
+          "features/communications",
+          "features/tasks",
+          "features/programs",
+          "features/reports"
         ]
       },
       {
@@ -36,12 +42,13 @@
         ]
       },
       {
-        "group": "Change Impacts",
+        "group": "Change impacts",
         "pages": [
           "change-impacts/overview",
           "change-impacts/creating-impacts",
           "change-impacts/mitigation",
-          "change-impacts/ai-extraction"
+          "change-impacts/ai-extraction",
+          "change-impacts/ai-summaries"
         ]
       },
       {
@@ -80,9 +87,21 @@
         ]
       },
       {
-        "group": "AI Features",
+        "group": "AI features",
         "pages": [
-          "ai-features/overview"
+          "ai-features/overview",
+          "features/ai-assistant",
+          "ai-features/mitigation-suggestions",
+          "ai-features/stakeholder-insights"
+        ]
+      },
+      {
+        "group": "Integrations",
+        "pages": [
+          "integrations/overview",
+          "integrations/microsoft-365",
+          "integrations/microsoft-teams",
+          "integrations/slack"
         ]
       },
       {
@@ -97,6 +116,7 @@
       {
         "group": "Guides",
         "pages": [
+          "guides/onboarding-checklist",
           "guides/organization-setup",
           "guides/import-export"
         ]

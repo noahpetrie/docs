@@ -1,0 +1,114 @@
+---
+title: Projects
+description: Create and manage change initiatives with projects
+icon: folder
+---
+
+Projects are the central organizing unit for change initiatives in Leap Change. Each project contains stakeholders, change impacts, surveys, communications, and tasks related to a specific change effort.
+
+## Creating a project
+
+1. Navigate to **Projects** from the sidebar
+2. Click **New project**
+3. Complete the guided wizard:
+
+<Steps>
+  <Step title="Describe the change">
+    - **Project name**: Clear, descriptive title
+    - **Description**: What is changing and why
+    - **Change owner**: Person responsible for the change
+    - **Sponsor**: Executive sponsor supporting the initiative
+  </Step>
+  <Step title="Classify">
+    - **Change type**: Technology, Process, Organizational, Policy
+    - **Priority**: Critical, High, Medium, Low
+    - **Departments affected**: Business areas impacted
+    - **Geographic scope**: Local, Regional, Global
+  </Step>
+  <Step title="Set timeline">
+    - **Start date**: When activities begin
+    - **Target go-live**: Expected implementation date
+    - **Milestones**: Key checkpoints
+  </Step>
+  <Step title="Plan transition">
+    - **Communication strategy**: How you'll inform stakeholders
+    - **Training approach**: How you'll prepare people
+    - **Support plan**: How you'll help during transition
+  </Step>
+  <Step title="Review and launch">
+    Review your project setup and click **Create project**.
+  </Step>
+</Steps>
+
+## Project properties
+
+| Property | Description |
+|----------|-------------|
+| Name | Descriptive title for the initiative |
+| Description | Detailed explanation of the change |
+| Status | Active, On Hold, Completed, Archived |
+| Start date | When the project begins |
+| Target end date | Expected completion date |
+| Change type | Category of change |
+| Priority | Urgency level |
+| Program | Optional parent program |
+
+## Project status
+
+Track project progress through statuses:
+
+- **Active**: Currently in progress
+- **On Hold**: Temporarily paused
+- **Completed**: Successfully finished
+- **Archived**: No longer active, preserved for reference
+
+## Project dashboard
+
+Each project has a dashboard showing:
+
+- **Stakeholder count**: People linked to this project
+- **Change impact count**: Impacts being tracked
+- **Survey status**: Active surveys and response rates
+- **Communication progress**: Completed vs planned activities
+- **Task completion**: Progress on action items
+
+## Linking stakeholders to projects
+
+Associate stakeholders with your project:
+
+1. Open the project
+2. Go to the **Stakeholders** tab
+3. Click **Add stakeholders**
+4. Select from your stakeholder database
+5. Save the associations
+
+Stakeholders can be linked to multiple projects to track cumulative change burden.
+
+## Organizing with programs
+
+Group related projects using programs for portfolio-level visibility:
+
+1. Create a program in **Programs**
+2. When creating or editing a project, select the parent program
+3. View aggregate metrics across all program projects
+
+<Tip>
+  Use programs for large transformations with multiple workstreams, like "Digital transformation" or "Office relocation".
+</Tip>
+
+## Project settings
+
+Access project settings to:
+
+- Edit project details and timeline
+- Change project status
+- Archive completed projects
+- Delete projects (admin only)
+
+## URL structure
+
+Projects use UUID-based URLs for bookmarking and sharing:
+
+```
+https://app.leapchange.io/projects/abc123-def456-ghi789
+```
