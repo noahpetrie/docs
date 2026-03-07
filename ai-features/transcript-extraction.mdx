@@ -1,0 +1,123 @@
+---
+title: Transcript impact extraction
+description: Automatically identify change impacts from meeting transcripts
+icon: file-lines
+---
+
+Upload meeting transcripts to automatically extract potential change impacts. AI analyzes the discussion and suggests impacts for your review, saving hours of manual analysis.
+
+## Supported formats
+
+Upload transcripts in these formats:
+
+| Format | Extension | Notes |
+|--------|-----------|-------|
+| WebVTT | .vtt | Common for video conferencing |
+| Word | .docx | Meeting notes documents |
+| Plain text | .txt | Simple transcripts |
+| PDF | .pdf | Formatted documents |
+
+## How it works
+
+1. **Upload** - Provide your transcript file
+2. **Analysis** - AI reads and understands the discussion
+3. **Extraction** - Potential impacts are identified
+4. **Review** - You approve, edit, or reject suggestions
+5. **Save** - Approved impacts are added to your project
+
+## Uploading a transcript
+
+1. Go to **Change Impacts**
+2. Click **Import** → **Extract from Transcript**
+3. Select your transcript file
+4. Choose the target project
+5. Click **Extract**
+
+### Processing time
+
+Extraction typically takes 30 seconds to 2 minutes depending on:
+
+- Transcript length
+- Document complexity
+- Current system load
+
+## Reviewing extracted impacts
+
+After extraction, review each suggested impact:
+
+### Impact details
+
+Each extraction includes:
+
+- **Title** - Brief description of the change
+- **Description** - Detailed explanation
+- **Current state** - How things work today
+- **Future state** - How things will change
+- **Suggested severity** - AI assessment of impact level
+- **Confidence** - How certain the AI is about this extraction
+
+### Actions
+
+For each suggested impact:
+
+| Action | Result |
+|--------|--------|
+| **Approve** | Add impact to project as-is |
+| **Edit** | Modify details before adding |
+| **Reject** | Discard the suggestion |
+
+### Bulk actions
+
+- **Approve All** - Accept all suggestions
+- **Reject All** - Discard all suggestions
+- **Edit Selected** - Modify multiple impacts
+
+## Tips for better extraction
+
+<AccordionGroup>
+  <Accordion title="Use clear transcripts">
+    Clean, well-formatted transcripts produce better results. Remove filler words and clarify speaker labels if possible.
+  </Accordion>
+  <Accordion title="Focus on change discussions">
+    Transcripts that explicitly discuss changes, impacts, and stakeholders yield more accurate extractions.
+  </Accordion>
+  <Accordion title="Review all suggestions">
+    AI may identify impacts you hadn't considered, or miss nuances only you understand. Always review carefully.
+  </Accordion>
+  <Accordion title="Edit before approving">
+    Extracted impacts are starting points. Enhance them with your organizational knowledge before saving.
+  </Accordion>
+</AccordionGroup>
+
+## Extraction accuracy
+
+Extraction quality depends on:
+
+- **Transcript clarity** - Clear discussions produce better results
+- **Explicit change language** - "We're changing X to Y" extracts well
+- **Context availability** - Industry and organizational context helps
+
+### When extraction works best
+
+- Project kickoff meetings discussing scope
+- Change impact workshops
+- Stakeholder feedback sessions
+- Process review discussions
+
+### When to use manual entry
+
+- Brief or informal conversations
+- Highly technical discussions with jargon
+- When impacts are implicit rather than stated
+
+## Usage quota
+
+Transcript extraction counts against your AI usage quota:
+
+| Plan | Extractions per month |
+|------|----------------------|
+| Basic | 10 |
+| Pro | 100 |
+| Enterprise | Unlimited |
+
+Check your usage in **Settings** → **AskLeap Usage**.
