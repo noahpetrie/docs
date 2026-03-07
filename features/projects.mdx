@@ -1,0 +1,134 @@
+---
+title: Projects
+description: Organize and manage change initiatives
+icon: folder
+---
+
+Projects are the primary organizational unit for change management in Leap Change. Each project represents a distinct change initiative with its own stakeholders, impacts, surveys, and communications.
+
+## What is a project?
+
+A project contains:
+
+- **Stakeholders** affected by the change
+- **Change impacts** being managed
+- **Surveys** for readiness assessment
+- **Communication plans** for stakeholder engagement
+- **Tasks** for work tracking
+
+## Project properties
+
+| Field | Description |
+|-------|-------------|
+| **Name** | Descriptive title for the initiative |
+| **Description** | Detailed explanation of the change |
+| **Status** | Active, On Hold, Completed, or Archived |
+| **Priority** | Critical, High, Medium, or Low |
+| **Change type** | Technology, Process, Organizational, Policy |
+| **Start date** | When change activities begin |
+| **Target go-live** | Expected implementation date |
+| **Change owner** | Person responsible for the initiative |
+| **Sponsor** | Executive sponsor |
+
+## Project stages
+
+Projects progress through these stages:
+
+| Stage | Activities |
+|-------|------------|
+| **Initiation** | Define scope, identify stakeholders, secure sponsorship |
+| **Planning** | Document impacts, create communication plan, prepare surveys |
+| **Execution** | Deliver communications, conduct training, manage resistance |
+| **Adoption** | Monitor adoption, address issues, reinforce changes |
+| **Sustainment** | Measure success, celebrate wins, transition to BAU |
+
+## Creating projects
+
+See [Create your first project](/getting-started/first-project) for a detailed walkthrough.
+
+### Quick creation
+
+1. Go to **Projects** in the sidebar
+2. Click **New Project**
+3. Enter name and description
+4. Set dates and priority
+5. Click **Create**
+
+### Guided wizard
+
+For comprehensive setup, use the project wizard:
+
+1. Click **New Project** → **Use Wizard**
+2. Follow the step-by-step guide
+3. Configure all aspects of your initiative
+
+## Project team
+
+Add team members to collaborate on your project:
+
+1. Open the project
+2. Go to **Settings** → **Team**
+3. Click **Add Member**
+4. Select users and assign roles:
+   - **Owner** - Full project control
+   - **Editor** - Can modify project data
+   - **Viewer** - Read-only access
+
+## Project settings
+
+### General settings
+
+- Edit name, description, and dates
+- Change status and priority
+- Update change type and geographic scope
+
+### Unique identifier
+
+Each project receives an auto-generated ID:
+
+- Format: `CHG-YYYY-NNNNN`
+- Example: `CHG-2026-00042`
+
+This ID is tenant-specific and sequential.
+
+## Project lifecycle
+
+### Active projects
+
+Active projects appear on your dashboard and are included in reports.
+
+### Archiving
+
+When a project is complete:
+
+1. Go to **Project Settings**
+2. Click **Archive Project**
+3. Confirm the archive
+
+Archived projects:
+- Remain accessible for reference
+- Don't appear in active filters
+- Preserve all historical data
+
+### Deleting
+
+<Warning>
+  Deleting a project removes all associated data including impacts, survey responses, and communication history. This cannot be undone.
+</Warning>
+
+## Related features
+
+<CardGroup cols={2}>
+  <Card title="Programs" icon="folder-tree" href="/features/programs">
+    Group related projects together
+  </Card>
+  <Card title="Stakeholders" icon="users" href="/stakeholders/overview">
+    Manage project stakeholders
+  </Card>
+  <Card title="Change impacts" icon="bullseye" href="/change-impacts/overview">
+    Track project impacts
+  </Card>
+  <Card title="Surveys" icon="clipboard-question" href="/surveys/overview">
+    Assess stakeholder readiness
+  </Card>
+</CardGroup>

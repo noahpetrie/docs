@@ -1,0 +1,107 @@
+---
+title: Integrations overview
+description: Connect Leap Change with your enterprise tools
+---
+
+Leap Change integrates with Microsoft 365 to streamline stakeholder management and communication. These integrations help keep your data synchronized and enable direct engagement through familiar tools.
+
+## Available integrations
+
+<CardGroup cols={2}>
+  <Card title="Microsoft Entra ID" icon="users" href="/integrations/microsoft-entra">
+    Sync users from Azure AD as stakeholders
+  </Card>
+  <Card title="Microsoft Teams" icon="message" href="/integrations/microsoft-teams">
+    Send messages and monitor channels
+  </Card>
+</CardGroup>
+
+## Integration benefits
+
+### Microsoft Entra ID (Azure AD)
+
+- **Automatic stakeholder sync** - Import users directly from your directory
+- **Keep data current** - Schedule syncs to maintain accuracy
+- **Sync manager relationships** - Preserve organizational hierarchy
+- **Group-based filtering** - Import specific Entra groups
+- **Profile photos** - Sync user photos automatically
+
+### Microsoft Teams
+
+- **Direct messaging** - Send messages to stakeholders via Teams
+- **Survey delivery** - Distribute surveys through Teams cards
+- **Channel monitoring** - Track change-related discussions
+- **Bot integration** - Proactive notifications and workflows
+
+## Getting started
+
+### Prerequisites
+
+- Microsoft 365 subscription with admin access
+- Appropriate permissions to grant consent
+- Leap Change admin role
+
+### Connection process
+
+1. Go to **Settings** → **Integrations**
+2. Click **Connect** next to the desired integration
+3. Sign in with your Microsoft admin account
+4. Review and approve requested permissions
+5. Configure integration settings
+
+## Managing integrations
+
+### Viewing status
+
+The Integrations page shows:
+
+- Connection status (Connected/Disconnected)
+- Last sync time
+- Sync errors if any
+- Quick actions
+
+### Disconnecting
+
+To remove an integration:
+
+1. Go to **Settings** → **Integrations**
+2. Click the integration
+3. Select **Disconnect**
+4. Confirm removal
+
+<Warning>
+  Disconnecting doesn't delete synced data. Stakeholders imported via Entra remain in Leap Change but won't receive updates.
+</Warning>
+
+## Required permissions
+
+### Entra ID permissions
+
+| Permission | Purpose |
+|------------|-------|
+| User.Read.All | Read user profiles |
+| Group.Read.All | Read group memberships |
+| Directory.Read.All | Access directory data |
+
+### Teams permissions
+
+| Permission | Purpose |
+|------------|-------|
+| Chat.ReadWrite | Send direct messages |
+| Channel.ReadBasic.All | Read channel info |
+| ChannelMessage.Read.All | Monitor channel messages |
+| TeamsActivity.Send | Send activity notifications |
+
+## Security considerations
+
+- OAuth tokens are encrypted at rest
+- Tokens refresh automatically
+- Admin consent is required
+- Data stays within your tenant
+
+## Troubleshooting
+
+See individual integration pages for troubleshooting:
+
+- [Microsoft Entra troubleshooting](/integrations/microsoft-entra#troubleshooting)
+- [Microsoft Teams troubleshooting](/integrations/microsoft-teams#troubleshooting)

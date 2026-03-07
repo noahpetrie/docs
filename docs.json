@@ -14,15 +14,15 @@
         "pages": [
           "getting-started/introduction",
           "getting-started/quickstart",
+          "getting-started/first-project",
           "getting-started/concepts"
         ]
       },
       {
-        "group": "Features",
+        "group": "Programs & projects",
         "pages": [
-          "getting-started/introduction",
-          "getting-started/quickstart",
-          "getting-started/first-project"
+          "features/programs",
+          "features/projects"
         ]
       },
       {
@@ -36,7 +36,7 @@
         ]
       },
       {
-        "group": "Change Impacts",
+        "group": "Change impacts",
         "pages": [
           "change-impacts/overview",
           "change-impacts/creating-impacts",
@@ -80,16 +80,26 @@
         ]
       },
       {
-        "group": "AI Features",
+        "group": "AI features",
         "pages": [
-          "ai-features/overview"
+          "ai-features/overview",
+          "ai-features/transcript-extraction",
+          "ai-features/stakeholder-insights",
+          "ai-features/mitigation-suggestions"
+        ]
+      },
+      {
+        "group": "Integrations",
+        "pages": [
+          "integrations/overview",
+          "integrations/microsoft-entra",
+          "integrations/microsoft-teams"
         ]
       },
       {
         "group": "Settings",
         "pages": [
           "settings/overview",
-          "settings/integrations",
           "settings/team-management",
           "settings/billing"
         ]
