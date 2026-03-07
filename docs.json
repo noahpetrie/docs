@@ -14,15 +14,23 @@
         "pages": [
           "getting-started/introduction",
           "getting-started/quickstart",
-          "getting-started/concepts"
+          "getting-started/concepts",
+          "getting-started/first-project"
         ]
       },
       {
         "group": "Features",
         "pages": [
-          "getting-started/introduction",
-          "getting-started/quickstart",
-          "getting-started/first-project"
+          "features/overview",
+          "features/programs",
+          "features/projects",
+          "features/stakeholders",
+          "features/change-impacts",
+          "features/surveys",
+          "features/communications",
+          "features/tasks",
+          "features/reports",
+          "features/ai-assistant"
         ]
       },
       {
@@ -36,7 +44,7 @@
         ]
       },
       {
-        "group": "Change Impacts",
+        "group": "Change impacts",
         "pages": [
           "change-impacts/overview",
           "change-impacts/creating-impacts",
@@ -80,7 +88,7 @@
         ]
       },
       {
-        "group": "AI Features",
+        "group": "AI features",
         "pages": [
           "ai-features/overview"
         ]
