@@ -14,14 +14,15 @@
         "pages": [
           "getting-started/introduction",
           "getting-started/quickstart",
+          "getting-started/dashboard",
+          "getting-started/first-project",
           "getting-started/concepts"
         ]
       },
       {
-        "group": "Features",
+        "group": "Programs & Projects",
         "pages": [
-          "getting-started/introduction",
-          "getting-started/quickstart",
+          "features/programs",
           "getting-started/first-project"
         ]
       },
@@ -89,6 +90,7 @@
         "group": "Settings",
         "pages": [
           "settings/overview",
+          "settings/account-security",
           "settings/integrations",
           "settings/team-management",
           "settings/billing"
