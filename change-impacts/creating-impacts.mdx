@@ -1,0 +1,86 @@
+---
+title: Creating change impacts
+description: Add and document change impacts in Leap Change
+---
+
+You can create change impacts manually or let AI extract them from meeting transcripts.
+
+## Manual creation
+
+1. Navigate to **Change Impacts** in the sidebar
+2. Click **Add Impact**
+3. Complete the impact form:
+
+### Basic information
+
+| Field | Description |
+|-------|-------------|
+| **Title** | Clear, concise description (e.g., "New expense approval workflow") |
+| **Description** | Detailed explanation of the impact |
+| **Project** | Associated change initiative |
+
+### State change
+
+Document what's changing:
+
+- **Current state** - How things work today
+- **Future state** - How things will work after the change
+
+<Tip>
+  Be specific about the differences. Instead of "new process," describe what changes: "Expenses over $500 now require manager approval within 48 hours."
+</Tip>
+
+### Classification
+
+- **Category** - Select one or more impact types:
+  - Process
+  - Technology
+  - Skills/Knowledge
+  - Organizational Structure
+  - Policy/Compliance
+  - Culture
+- **Severity** - High, Medium, or Low based on effort and disruption
+
+### Affected stakeholders
+
+Link stakeholders or groups who will be impacted:
+
+1. Click **Add Affected Stakeholders**
+2. Search and select stakeholders
+3. Optionally select entire groups
+
+4. Click **Save** to create the impact
+
+## Duplicate detection
+
+When creating an impact, Leap Change checks for similar existing impacts. If a potential duplicate is found, you can:
+
+- **View the existing impact** to confirm it's the same
+- **Mark as duplicate** to link them
+- **Continue creating** if it's a distinct impact
+
+## Impact numbering
+
+Each impact receives a unique identifier automatically:
+
+- Format: `CHG-YYYY-NNNNN`
+- Example: `CHG-2026-00042`
+
+This ID is tenant-specific and sequential within each year.
+
+## Best practices
+
+<AccordionGroup>
+  <Accordion title="Write clear titles">
+    Use action-oriented titles that describe the change: "Finance team adopts new expense system" rather than "Expense system."
+  </Accordion>
+  <Accordion title="Document both states">
+    Always fill in both current and future state to clarify what's actually changing.
+  </Accordion>
+  <Accordion title="Be conservative with severity">
+    Reserve "High" for impacts requiring significant behavior change or affecting critical processes.
+  </Accordion>
+  <Accordion title="Link all affected stakeholders">
+    Impacts without linked stakeholders may be overlooked in communications and readiness tracking.
+  </Accordion>
+</AccordionGroup>
