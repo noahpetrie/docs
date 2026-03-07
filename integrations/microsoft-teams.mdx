@@ -1,0 +1,117 @@
+---
+title: Microsoft Teams
+description: Send messages and surveys to stakeholders via Microsoft Teams
+---
+
+Connect Leap Change to Microsoft Teams to send messages, distribute surveys, and monitor channels for change-related discussions.
+
+## Connecting
+
+<Steps>
+  <Step title="Access integrations">
+    Go to **Settings** → **Integrations** and find Microsoft Teams.
+  </Step>
+  <Step title="Authorize">
+    Click **Connect** and sign in with your Microsoft account.
+  </Step>
+  <Step title="Install the bot">
+    Authorize the Leap Change bot in your Teams tenant.
+  </Step>
+  <Step title="Configure channels">
+    Optionally select default notification channels.
+  </Step>
+</Steps>
+
+## Sending messages
+
+### Direct messages
+
+Send 1:1 messages to stakeholders:
+
+1. Open a stakeholder profile
+2. Click **Send Teams message**
+3. Compose your message with personalization tokens
+4. Click **Send**
+
+### Personalization tokens
+
+Use these tokens in your messages:
+
+| Token | Replaced with |
+|-------|---------------|
+| `{{name}}` | Stakeholder's full name |
+| `{{role}}` | Job title |
+| `{{department}}` | Department name |
+| `{{business_unit}}` | Business unit |
+| `{{location}}` | Office location |
+| `{{country}}` | Country |
+| `{{email}}` | Email address |
+
+### Bulk messaging
+
+Send to multiple stakeholders:
+
+1. Select stakeholders using checkboxes
+2. Click **Send message** in the bulk actions footer
+3. Choose **Microsoft Teams**
+4. Compose and send
+
+## Survey distribution
+
+Send surveys via Teams adaptive cards:
+
+1. Create a survey in **Surveys**
+2. Click **Send survey**
+3. Select stakeholders
+4. Choose **Microsoft Teams** as the delivery channel
+5. Send
+
+Stakeholders receive an interactive card they can respond to directly in Teams.
+
+## Teams bot
+
+The Leap Change bot enables:
+
+- **Proactive messaging**: Send messages to users who've interacted with the bot
+- **Adaptive cards**: Rich interactive content for surveys
+- **Conversation tracking**: Bot maintains conversation references for follow-up
+
+<Note>
+  Users must have interacted with the Leap Change bot at least once before you can send them proactive messages. Consider having users install the bot as part of onboarding.
+</Note>
+
+## Channel monitoring
+
+Monitor Teams channels for change-related discussions:
+
+1. Go to **Settings** → **Integrations** → **Teams**
+2. Select channels to monitor
+3. Configure keywords to watch
+
+When monitored keywords appear, Leap Change can:
+
+- Create notifications
+- Suggest new change impacts
+- Track discussion sentiment
+
+## Message logging
+
+All Teams messages sent through Leap Change are logged:
+
+- View in stakeholder communication history
+- Track delivery status
+- Audit messaging activity
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="User not receiving messages">
+    The user must have interacted with the Leap Change bot first. Have them search for "Leap Change" in Teams and send any message to establish the conversation.
+  </Accordion>
+  <Accordion title="Bot not found">
+    The Leap Change bot may not be installed in your tenant. Contact your Teams admin to approve the bot.
+  </Accordion>
+  <Accordion title="Permission errors">
+    Verify the integration has the required permissions. You may need to re-authorize.
+  </Accordion>
+</AccordionGroup>

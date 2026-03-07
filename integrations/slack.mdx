@@ -1,0 +1,122 @@
+---
+title: Slack
+description: Send messages, notifications, and surveys through Slack
+---
+
+Connect Leap Change to Slack to reach stakeholders through direct messages, channel posts, and interactive surveys.
+
+## Connecting
+
+<Steps>
+  <Step title="Access integrations">
+    Go to **Settings** → **Integrations** and find Slack.
+  </Step>
+  <Step title="Authorize">
+    Click **Connect** and sign in to your Slack workspace.
+  </Step>
+  <Step title="Grant permissions">
+    Approve the requested bot permissions.
+  </Step>
+  <Step title="Configure channels">
+    Select notification channels for different event types.
+  </Step>
+</Steps>
+
+## Permissions
+
+The Slack integration requests:
+
+- **Bot token scopes**: Send messages, read channels, manage conversations
+- **User token scopes**: Limited to workspace user list for mapping
+
+## Sending messages
+
+### Direct messages
+
+Send 1:1 messages to stakeholders:
+
+1. Open a stakeholder profile
+2. Click **Send Slack message**
+3. Compose your message with personalization tokens
+4. Click **Send**
+
+### Channel posts
+
+Post to Slack channels:
+
+1. From communications, select Slack as the channel
+2. Choose the target Slack channel
+3. Compose and send
+
+### Personalization tokens
+
+Same tokens available as Teams:
+
+- `{{name}}`, `{{role}}`, `{{department}}`
+- `{{business_unit}}`, `{{location}}`, `{{country}}`
+- `{{email}}`
+
+## Survey distribution
+
+Send surveys via Slack Block Kit:
+
+1. Create a survey in **Surveys**
+2. Click **Send survey**
+3. Select stakeholders
+4. Choose **Slack** as the delivery channel
+5. Send
+
+Stakeholders receive an interactive Block Kit message. After responding, the message updates to show a thank-you confirmation.
+
+## Notification channels
+
+Configure automatic notifications for events:
+
+1. Go to **Settings** → **Integrations** → **Slack**
+2. Select a default notification channel
+3. Choose which events trigger notifications:
+
+| Event | Description |
+|-------|-------------|
+| Change impact created | New impact logged |
+| Survey launched | Survey sent to stakeholders |
+| Project updated | Project status or details changed |
+
+## User mapping
+
+Leap Change maps stakeholders to Slack users by email:
+
+1. View workspace users in integration settings
+2. Stakeholders with matching emails can receive direct messages
+3. Users without matches can still be reached via channels
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="User not receiving DMs">
+    Verify the stakeholder's email matches their Slack profile email. Slack requires exact email matching for user lookup.
+  </Accordion>
+  <Accordion title="Channel not visible">
+    For private channels, invite the Leap Change bot to the channel first. Public channels are automatically accessible.
+  </Accordion>
+  <Accordion title="Rate limited">
+    Slack has rate limits on message sending. For large sends, messages are queued and delivered gradually.
+  </Accordion>
+  <Accordion title="Permission errors">
+    Re-authorize the integration. Slack permissions may have been revoked or changed.
+  </Accordion>
+</AccordionGroup>
+
+## Disconnecting
+
+To disconnect:
+
+1. Go to **Settings** → **Integrations**
+2. Click **Disconnect** on Slack
+3. Confirm
+
+Or revoke from Slack:
+
+1. Go to Slack **Settings** → **Manage apps**
+2. Find Leap Change
+3. Revoke access

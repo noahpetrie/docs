@@ -1,76 +1,124 @@
 ---
-title: AI impact extraction
-description: Automatically extract change impacts from meeting transcripts
+title: AI transcript extraction
+description: Automatically extract change impacts from meeting transcripts using AI
 ---
 
-Leap Change uses AI to analyze meeting transcripts and automatically identify potential change impacts. This saves time and ensures you don't miss important impacts mentioned in discussions.
+Leap Change uses AI to analyze meeting transcripts and automatically identify potential change impacts. This saves hours of manual review and ensures you don't miss important impacts mentioned in discussions.
 
 ## Supported formats
 
 Upload transcripts in these formats:
 
-- **VTT** - Web Video Text Tracks (from Teams, Zoom, etc.)
-- **DOCX** - Word documents
-- **TXT** - Plain text files
-- **PDF** - PDF documents
+- **VTT**: Video Text Tracks (common from Teams, Zoom)
+- **DOCX**: Microsoft Word documents
+- **TXT**: Plain text files
+- **PDF**: PDF documents
 
-## Extraction process
+## Uploading a transcript
 
-### Step 1: Upload transcript
+<Steps>
+  <Step title="Navigate to import">
+    Go to **Change Impacts** and click **Import** → **From Transcript**, or access via **AI Features**.
+  </Step>
+  <Step title="Upload your file">
+    Select or drag your transcript file.
+  </Step>
+  <Step title="Select target project">
+    Choose which project the extracted impacts should be added to.
+  </Step>
+  <Step title="Run extraction">
+    Click **Extract** and wait for AI analysis (typically 30-60 seconds).
+  </Step>
+</Steps>
 
-1. Go to **Change Impacts**
-2. Click **Import** → **From Transcript**
-3. Select your transcript file
-4. Choose the associated project
+## What gets extracted
 
-### Step 2: AI analysis
+The AI identifies both explicit and implied changes in your transcript:
 
-Leap Change processes your transcript and:
+### Explicit changes
 
-- Identifies statements about changes
-- Extracts current and future state descriptions
-- Suggests severity levels
-- Groups related mentions
+Direct statements about changes:
 
-This typically takes 30-60 seconds depending on transcript length.
+- "We're migrating to the new CRM system"
+- "The approval workflow will change"
+- "Everyone needs to complete training by March"
 
-### Step 3: Review suggestions
+### Implied changes
 
-You'll see a list of suggested impacts:
+Changes suggested by context:
 
-- **Title** - AI-generated title
-- **Description** - Extracted details
-- **Confidence** - How confident the AI is in the extraction
-- **Source quote** - The transcript excerpt that triggered the suggestion
+- Discussion of new processes or tools
+- Mentions of upcoming deadlines
+- References to things "going away" or "being replaced"
 
-### Step 4: Accept or reject
+### For each impact, AI provides:
 
-For each suggestion:
+| Field | Description |
+|-------|-------------|
+| Title | Brief summary of the impact |
+| Description | Detailed explanation |
+| Category | People, Process, Technology, Security, Business |
+| Severity | Assessed impact level |
+| Affected roles | Who is likely affected |
+| Source quote | Original text from transcript |
+| Confidence | How confident the AI is in this extraction |
 
-- **Accept** - Creates the impact with the suggested details
-- **Edit and accept** - Modify details before creating
-- **Reject** - Discard the suggestion
-- **Merge** - Combine with an existing impact
+## Reviewing extracted impacts
 
-## Tips for better extraction
+Extracted impacts appear in a review queue. For each suggestion:
+
+- **Accept**: Creates the impact with suggested details
+- **Edit and accept**: Modify details before creating
+- **Reject**: Discard the suggestion
+- **Merge**: Combine with an existing impact if it's a duplicate
+
+<Tip>
+  Review all extracted impacts before accepting. AI suggestions are starting points that benefit from your organizational context.
+</Tip>
+
+## Duplicate detection
+
+The AI automatically checks extracted impacts against existing impacts in your project:
+
+- **Exact matches**: Flagged as duplicates
+- **Similar impacts**: Highlighted for review
+- **New impacts**: Marked as ready to add
+
+## Confidence scores
+
+Each extraction includes a confidence score:
+
+| Score | Meaning |
+|-------|----------|
+| High (80-100%) | Clear, explicit mention of change |
+| Medium (50-79%) | Likely a change, some interpretation needed |
+| Low (below 50%) | Possible change, requires verification |
+
+Focus review time on lower-confidence extractions.
+
+## Best practices
 
 <AccordionGroup>
-  <Accordion title="Use clear meeting transcripts">
-    Automated transcription works best when speakers are clear. Manual cleanup of obvious errors improves results.
+  <Accordion title="Use complete transcripts">
+    Full meeting transcripts provide more context than excerpts or notes.
   </Accordion>
-  <Accordion title="Include context in discussions">
-    Mentioning "this change will affect..." or "the impact on..." helps the AI identify impacts.
+  <Accordion title="Clean up transcripts">
+    Remove headers, footers, and system messages for better results. Manual cleanup of obvious transcription errors improves accuracy.
   </Accordion>
-  <Accordion title="Review all suggestions">
-    AI may suggest duplicates or miss context—always review before accepting.
+  <Accordion title="Provide context in project">
+    Having existing impacts in the project helps duplicate detection.
   </Accordion>
-  <Accordion title="Provide project context">
-    Selecting the correct project helps the AI filter relevant impacts.
+  <Accordion title="Review in batches">
+    Process extracted impacts while the meeting is fresh in memory.
   </Accordion>
 </AccordionGroup>
 
 ## Usage tracking
 
-AI extraction uses your organization's AI quota. Track usage in **Settings** → **AskLeap Usage**.
+Transcript extraction consumes AI quota:
+
+- Usage tracked in **Settings** → **AskLeap Usage**
+- Larger transcripts use more quota
+- Results are cached for re-review
 
 See [AI features overview](/ai-features/overview) for more on AI capabilities.
