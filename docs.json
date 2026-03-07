@@ -14,15 +14,17 @@
         "pages": [
           "getting-started/introduction",
           "getting-started/quickstart",
-          "getting-started/concepts"
+          "getting-started/concepts",
+          "getting-started/first-project"
         ]
       },
       {
         "group": "Features",
         "pages": [
-          "getting-started/introduction",
-          "getting-started/quickstart",
-          "getting-started/first-project"
+          "features/home-dashboard",
+          "features/projects",
+          "features/programs",
+          "features/keyboard-shortcuts"
         ]
       },
       {
@@ -36,7 +38,7 @@
         ]
       },
       {
-        "group": "Change Impacts",
+        "group": "Change impacts",
         "pages": [
           "change-impacts/overview",
           "change-impacts/creating-impacts",
@@ -80,16 +82,20 @@
         ]
       },
       {
-        "group": "AI Features",
+        "group": "AI features",
         "pages": [
-          "ai-features/overview"
+          "ai-features/overview",
+          "ai-features/chat",
+          "ai-features/insights"
         ]
       },
       {
         "group": "Settings",
         "pages": [
           "settings/overview",
+          "settings/appearance",
           "settings/integrations",
+          "settings/slack-integration",
           "settings/team-management",
           "settings/billing"
         ]

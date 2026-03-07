@@ -1,105 +1,125 @@
 ---
 title: Programs
-description: Organize related change initiatives into programs for better coordination and oversight
-icon: folder-tree
+description: Group related projects into programs for portfolio management
 ---
 
-Programs help you group related change initiatives together, enabling coordinated planning and consolidated reporting across multiple projects.
+Programs allow you to organize multiple related change projects under a single umbrella. Use programs for large-scale transformations that span multiple initiatives.
 
 ## What is a program?
 
-A program is a collection of related initiatives that share:
+A program is a collection of related projects that share:
 
-- Common strategic objectives
-- Overlapping stakeholder groups
-- Interdependencies or sequencing requirements
-- Shared resources or timelines
+- Common business objectives
+- Shared stakeholders or resources
+- Interdependencies between changes
+- Unified governance and reporting
 
-**Example**: A "Digital transformation" program might include:
-- New CRM implementation
-- Legacy system retirement
-- Process automation initiative
-- Digital skills training
+**Example**: A "Digital Transformation" program might include:
+- CRM implementation project
+- Cloud migration project  
+- Process automation project
 
 ## Creating a program
 
-1. Navigate to **Programs** in the sidebar
-2. Click **New program**
-3. Enter program details:
-   - **Name**: Clear, descriptive title
-   - **Description**: Overview of program objectives and scope
+<Note>
+  Program creation requires admin permissions.
+</Note>
+
+1. Navigate to **Programs** from the sidebar
+2. Click **New Program**
+3. Fill in program details:
+   - **Name** - Descriptive program title
+   - **Description** - Purpose and scope
+   - **Start date** - When the program begins
+   - **Target date** - Expected completion
 4. Click **Create**
 
-## Managing programs
+## Program dashboard
 
-### Adding initiatives to a program
+The program view shows:
 
-When creating or editing an initiative:
+- **Project count** - Number of linked projects
+- **Overall status** - Aggregated from project statuses
+- **Timeline** - Program duration with project milestones
+- **Stakeholder overlap** - People affected by multiple projects
 
-1. Open the initiative settings
-2. In the **Program** field, select the parent program
-3. Save the changes
+## Linking projects to programs
 
-### Viewing program contents
+### From the program
 
-1. Open a program from the list
-2. See all linked initiatives
-3. View aggregate metrics:
-   - Total initiatives
-   - Overall status
-   - Combined stakeholder count
-   - Impact summary
+1. Open the program
+2. Click **Add Projects**
+3. Select existing projects to include
+4. Save changes
 
-## Program-level insights
+### From a project
 
-Programs provide consolidated views across their initiatives:
+1. Open project settings
+2. Select **Program** dropdown
+3. Choose the parent program
+4. Save
 
-### Stakeholder overlap
+## Cross-project insights
 
-Identify stakeholders affected by multiple initiatives within the program. This helps:
+Programs provide portfolio-level visibility:
 
-- Prevent communication fatigue
-- Coordinate messaging timing
-- Understand cumulative change burden
+### Shared stakeholders
 
-### Impact aggregation
+Identify stakeholders affected by multiple projects:
 
-See the combined change impact across all program initiatives:
+- Avoid change fatigue by coordinating communications
+- Recognize cumulative impact burden
+- Plan integrated engagement strategies
 
-- Total impacts by severity
-- Impacts by category
-- Cross-initiative dependencies
+### Impact overlap
+
+See where changes intersect:
+
+- Technology changes affecting the same systems
+- Process changes in the same departments
+- Training needs that can be combined
 
 ### Timeline coordination
 
-Visualize initiative timelines together to:
+Visualize all project timelines together:
 
-- Identify scheduling conflicts
-- Optimize sequencing
-- Balance resource demands
+- Avoid scheduling conflicts
+- Stagger go-lives to reduce risk
+- Identify resource bottlenecks
 
-## Program administration
+## Managing programs
 
-### Editing programs
+### Program status
+
+Program status is calculated from project statuses:
+
+| Condition | Program status |
+|-----------|----------------|
+| All projects completed | Completed |
+| Any project on hold | At Risk |
+| All projects active | In Progress |
+| No projects started | Planning |
+
+### Removing projects
+
+To remove a project from a program:
 
 1. Open the program
-2. Click the edit icon
-3. Update name or description
-4. Save changes
+2. Find the project in the list
+3. Click **Remove from Program**
 
-### Deleting programs
+The project continues to exist independently.
 
-<Warning>
-  Deleting a program does not delete its initiatives. Initiatives will become unlinked from any program.
-</Warning>
+## Best practices
 
-1. Open the program
-2. Click delete
-3. Confirm the deletion
-
-## Access control
-
-Programs follow the same access model as initiatives:
-
-- **Organization members** can view programs
-- **Admins** can create, edit, and delete programs
+<AccordionGroup>
+  <Accordion title="Define clear program scope">
+    Only group projects that genuinely share objectives or dependencies. Avoid creating programs just for organizational convenience.
+  </Accordion>
+  <Accordion title="Assign a program manager">
+    Designate someone responsible for cross-project coordination and reporting.
+  </Accordion>
+  <Accordion title="Regular program reviews">
+    Hold periodic reviews to assess overall program health and address cross-cutting issues.
+  </Accordion>
+</AccordionGroup>
