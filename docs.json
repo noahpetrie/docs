@@ -14,15 +14,8 @@
         "pages": [
           "getting-started/introduction",
           "getting-started/quickstart",
+          "getting-started/first-project",
           "getting-started/concepts"
-        ]
-      },
-      {
-        "group": "Features",
-        "pages": [
-          "getting-started/introduction",
-          "getting-started/quickstart",
-          "getting-started/first-project"
         ]
       },
       {
@@ -98,7 +91,8 @@
         "group": "Guides",
         "pages": [
           "guides/organization-setup",
-          "guides/import-export"
+          "guides/import-export",
+          "guides/keyboard-shortcuts"
         ]
       }
     ]
