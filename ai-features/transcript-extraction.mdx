@@ -1,0 +1,123 @@
+---
+title: Transcript extraction
+description: Automatically extract change impacts from meeting transcripts using AI
+icon: file-audio
+---
+
+Upload meeting transcripts to automatically identify change impacts. The AI analyzes discussions and extracts potential impacts for your review.
+
+## How it works
+
+1. **Upload** a transcript file or paste text
+2. **AI processes** the content to identify changes discussed
+3. **Review** suggested impacts
+4. **Accept** relevant impacts into your change register
+
+## Supported formats
+
+| Format | Extension | Notes |
+|--------|-----------|-------|
+| WebVTT | .vtt | Microsoft Teams, Zoom transcripts |
+| Word | .docx | Meeting notes documents |
+| Text | .txt | Plain text transcripts |
+| PDF | .pdf | Formatted meeting minutes |
+
+Maximum file size: 10MB
+
+## Uploading a transcript
+
+1. Navigate to **Change Impacts**
+2. Click **Add Impact** → **Extract from Transcript**
+3. Choose your input method:
+
+<Tabs>
+  <Tab title="File upload">
+    1. Click **Upload File**
+    2. Select your transcript file
+    3. File name appears when uploaded
+  </Tab>
+  <Tab title="Paste text">
+    1. Select **Paste Text**
+    2. Paste your meeting notes or transcript
+    3. Click **Continue**
+  </Tab>
+</Tabs>
+
+## Providing context
+
+Help the AI extract better impacts by providing context:
+
+- **Project**: Which initiative this meeting relates to
+- **Meeting title**: What the meeting was about
+- **Meeting date**: When it occurred
+- **Process areas**: Which business areas were discussed
+- **Project phase**: Current project stage (Discovery, Planning, Implementation, etc.)
+
+<Tip>
+  The more context you provide, the more accurate the extracted impacts will be.
+</Tip>
+
+## Reviewing extracted impacts
+
+After processing, you'll see a list of suggested impacts:
+
+### For each impact
+
+- **Title**: Brief description of the change
+- **Description**: Detailed explanation
+- **Current state**: How things work today
+- **Future state**: How things will work after the change
+- **Affected areas**: Who or what is impacted
+
+### Actions
+
+| Action | Description |
+|--------|-------------|
+| **Accept** | Add impact to your change register |
+| **Edit** | Modify details before accepting |
+| **Reject** | Skip this suggestion |
+| **Accept All** | Add all remaining impacts |
+
+## Deduplication
+
+The system checks for existing impacts with similar titles:
+
+- Duplicate suggestions are flagged
+- You can skip duplicates or create anyway
+- Original impacts are not modified
+
+## Best practices
+
+<AccordionGroup>
+  <Accordion title="Use structured meeting notes">
+    Transcripts with clear discussion topics and action items yield better results.
+  </Accordion>
+  <Accordion title="Include context in transcripts">
+    Meeting titles, dates, and attendees help the AI understand the context.
+  </Accordion>
+  <Accordion title="Review all suggestions">
+    AI may occasionally misinterpret discussions—always review before accepting.
+  </Accordion>
+  <Accordion title="Edit for accuracy">
+    Refine extracted impacts to ensure they accurately reflect the intended change.
+  </Accordion>
+</AccordionGroup>
+
+## Viewing extraction history
+
+Access past extractions:
+
+1. Go to **Change Impacts** → **Extraction History**
+2. See all uploaded transcripts
+3. View which impacts were accepted from each
+4. Re-process if needed
+
+## Usage tracking
+
+Transcript extraction consumes AI credits. Monitor usage in **Settings** → **AskLeap Usage**.
+
+| Action | Credits consumed |
+|--------|------------------|
+| Small transcript (<5000 words) | 1 credit |
+| Medium transcript (5000-15000 words) | 2 credits |
+| Large transcript (>15000 words) | 3 credits |
