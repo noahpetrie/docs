@@ -55,16 +55,63 @@ Jane,Doe,jane.doe@example.com,HR,Director,London,Medium,Neutral
 
 ## Microsoft 365 sync
 
-If you have Microsoft 365 integration enabled, you can sync users from your organization:
+If you have Microsoft 365 integration enabled, you can sync users from Microsoft Entra ID (formerly Azure AD):
+
+### Setting up sync
 
 1. Go to **Settings** → **Integrations**
-2. Connect your Microsoft 365 account
-3. Configure sync settings:
-   - **Merge strategy** - How to handle conflicts
-   - **Sync frequency** - Manual, daily, or weekly
-   - **Filter by groups** - Sync specific Entra groups
+2. Click **Connect Microsoft 365**
+3. Sign in with your Microsoft admin account
+4. Grant required permissions
 
-See [Microsoft 365 integration](/settings/integrations#microsoft-365) for details.
+### Configuring sync settings
+
+| Setting | Options | Description |
+|---------|---------|-------------|
+| **Sync frequency** | Manual, Daily, Twice daily, Weekly | How often to automatically sync |
+| **Merge strategy** | Entra wins, Leap wins, Skip conflicts | How to handle existing stakeholders |
+| **Group filtering** | Select Entra groups | Only sync members of specific groups |
+| **Sync groups** | On/Off | Create stakeholder groups from Entra groups |
+
+### Running a sync
+
+1. Go to **Settings** → **Integrations** → **Microsoft 365**
+2. Click **Sync Now**
+3. Monitor progress in the sync log
+
+### What gets synced
+
+From Microsoft Entra ID, the following fields are imported:
+
+- Display name (first name, last name)
+- Email address
+- Job title
+- Department
+- Office location
+- Phone number
+- Profile photo
+- Geographic coordinates (from office location)
+- Group memberships (if enabled)
+
+### Handling conflicts
+
+When a synced user already exists in Leap Change:
+
+| Strategy | Behavior |
+|----------|----------|
+| **Entra wins** | Microsoft data overwrites existing Leap Change data |
+| **Leap wins** | Keep existing Leap Change data, don't update |
+| **Skip conflicts** | Leave conflicting records unchanged |
+
+### Deactivated users
+
+When users are removed from Microsoft Entra ID:
+
+- They are soft-deactivated in Leap Change
+- Historical data and associations are preserved
+- They can be reactivated if they return
+
+See [Integrations](/settings/integrations#microsoft-365) for complete setup instructions.
 
 ## Assigning to projects
 

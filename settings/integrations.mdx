@@ -115,6 +115,71 @@ The Leap Change bot can:
 - Send scheduled notifications
 - Support interactive workflows
 
+## Slack
+
+Connect your Slack workspace to receive notifications and send messages through Leap Change.
+
+### Connecting
+
+1. Go to **Settings** → **Integrations**
+2. Find the Slack section
+3. Click **Connect Slack**
+4. Sign in to your Slack workspace
+5. Authorize the Leap Change app
+6. Select a default notification channel
+
+<Note>
+  You need to be a Slack workspace admin to authorize the app.
+</Note>
+
+### Features
+
+#### Notifications
+
+Configure automatic notifications for:
+
+| Event | Description |
+|-------|-------------|
+| Change impact created | New impact added to any project |
+| Survey launched | Survey starts accepting responses |
+| Project updated | Status or key details changed |
+| Survey responses | New survey submissions received |
+
+#### Channel configuration
+
+1. Click **Configure Channels**
+2. Select which channel receives each notification type
+3. Enable or disable individual event types
+4. Save your preferences
+
+#### Sending messages
+
+Send Slack messages from Leap Change:
+
+- From stakeholder profiles (if Slack ID is mapped)
+- As part of communication activities
+- For survey reminders
+
+### Disconnecting
+
+1. Go to **Settings** → **Integrations**
+2. Find the Slack section
+3. Click **Disconnect**
+4. Confirm disconnection
+
+Disconnecting stops all notifications but doesn't delete historical data.
+
+## Jira (Coming soon)
+
+Sync change impacts with Jira tickets for integrated project management.
+
+### Planned features
+
+- Create Jira issues from change impacts
+- Sync status between systems
+- Link impacts to existing tickets
+- Two-way comment synchronization
+
 ## Troubleshooting
 
 ### Connection issues
@@ -122,7 +187,7 @@ The Leap Change bot can:
 If integration fails:
 
 1. Check admin permissions
-2. Verify network access to Microsoft services
+2. Verify network access to the service
 3. Re-authorize if tokens expired
 4. Contact support if issues persist
 
@@ -132,7 +197,15 @@ Common sync issues:
 
 | Error | Solution |
 |-------|----------|
-| User not found | User may have been deleted in Entra |
-| Permission denied | Check app permissions in Azure |
+| User not found | User may have been deleted in the source system |
+| Permission denied | Check app permissions |
 | Rate limited | Wait and retry automatically |
-| Invalid data | Check user profile completeness |
+| Invalid data | Check profile completeness |
+
+### Slack-specific issues
+
+| Issue | Solution |
+|-------|----------|
+| Notifications not appearing | Check channel permissions for the Leap Change bot |
+| Can't find channel | Invite the Leap Change app to the channel first |
+| Message failed | Verify the recipient has a Slack account |

@@ -14,15 +14,8 @@
         "pages": [
           "getting-started/introduction",
           "getting-started/quickstart",
+          "getting-started/first-project",
           "getting-started/concepts"
-        ]
-      },
-      {
-        "group": "Features",
-        "pages": [
-          "getting-started/introduction",
-          "getting-started/quickstart",
-          "getting-started/first-project"
         ]
       },
       {
@@ -82,13 +75,16 @@
       {
         "group": "AI Features",
         "pages": [
-          "ai-features/overview"
+          "ai-features/overview",
+          "ai-features/transcript-extraction",
+          "ai-features/chat-assistant"
         ]
       },
       {
         "group": "Settings",
         "pages": [
           "settings/overview",
+          "settings/profile",
           "settings/integrations",
           "settings/team-management",
           "settings/billing"
@@ -98,7 +94,9 @@
         "group": "Guides",
         "pages": [
           "guides/organization-setup",
-          "guides/import-export"
+          "guides/projects-programs",
+          "guides/import-export",
+          "guides/authentication"
         ]
       }
     ]
