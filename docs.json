@@ -14,15 +14,16 @@
         "pages": [
           "getting-started/introduction",
           "getting-started/quickstart",
-          "getting-started/concepts"
+          "getting-started/concepts",
+          "getting-started/first-project"
         ]
       },
       {
-        "group": "Features",
+        "group": "Programs",
         "pages": [
-          "getting-started/introduction",
-          "getting-started/quickstart",
-          "getting-started/first-project"
+          "programs/overview",
+          "programs/creating-programs",
+          "programs/managing-initiatives"
         ]
       },
       {
@@ -36,7 +37,7 @@
         ]
       },
       {
-        "group": "Change Impacts",
+        "group": "Change impacts",
         "pages": [
           "change-impacts/overview",
           "change-impacts/creating-impacts",
@@ -66,7 +67,9 @@
       {
         "group": "Tasks",
         "pages": [
-          "tasks/overview"
+          "tasks/overview",
+          "tasks/creating-tasks",
+          "tasks/kanban-board"
         ]
       },
       {
@@ -80,9 +83,27 @@
         ]
       },
       {
-        "group": "AI Features",
+        "group": "AI features",
         "pages": [
-          "ai-features/overview"
+          "ai-features/overview",
+          "ai-features/transcript-extraction",
+          "ai-features/askleap-chat"
+        ]
+      },
+      {
+        "group": "Integrations",
+        "pages": [
+          "integrations/overview",
+          "integrations/microsoft-365",
+          "integrations/microsoft-teams",
+          "integrations/slack"
+        ]
+      },
+      {
+        "group": "Account",
+        "pages": [
+          "account/profile-settings",
+          "account/organization-settings"
         ]
       },
       {

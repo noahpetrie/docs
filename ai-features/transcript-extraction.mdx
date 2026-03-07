@@ -1,0 +1,128 @@
+---
+title: AI transcript extraction
+description: Extract change impacts from meeting transcripts using AI
+---
+
+Leap Change can automatically identify change impacts from your meeting transcripts, saving hours of manual analysis.
+
+## Supported formats
+
+Upload transcripts in these formats:
+
+| Format | Extension | Description |
+|--------|-----------|-------------|
+| VTT | `.vtt` | Web Video Text Tracks |
+| SRT | `.srt` | SubRip Subtitle format |
+| Text | `.txt` | Plain text transcripts |
+| Word | `.docx` | Microsoft Word documents |
+
+You can also paste transcript text directly.
+
+## Extracting impacts
+
+1. Navigate to **Change Impacts**
+2. Click **Add Impact** → **Extract from transcript**
+3. Choose your input method:
+   - **Upload file**: Select a transcript file
+   - **Paste text**: Paste transcript content directly
+4. Add meeting metadata (optional):
+   - Meeting title
+   - Meeting date
+   - Process areas discussed
+   - Project phase
+5. Click **Extract impacts**
+
+## Review process
+
+Extracted impacts require review before being added:
+
+1. AI analyzes the transcript
+2. Identified impacts appear in a review queue
+3. For each impact, you can:
+   - **Accept**: Add to your change impacts
+   - **Edit**: Modify before accepting
+   - **Reject**: Discard the suggestion
+4. Accepted impacts are created in your project
+
+## Meeting metadata
+
+Providing context improves extraction accuracy:
+
+| Field | Purpose |
+|-------|----------|
+| **Meeting title** | Helps contextualize discussions |
+| **Meeting date** | Associates impacts with timeline |
+| **Process areas** | Focuses on relevant business areas |
+| **Project phase** | Indicates maturity of discussions |
+
+## AI analysis
+
+The AI identifies:
+
+### Change descriptions
+- What is changing
+- Current state vs future state
+- Specific process or system changes
+
+### Impact assessment
+- Suggested severity level
+- Affected stakeholder groups
+- Potential risk areas
+
+### Mitigation hints
+- Discussed mitigation strategies
+- Mentioned action items
+- Stakeholder concerns
+
+## Deduplication
+
+The AI checks for existing similar impacts:
+
+- Compares against your current impacts
+- Flags potential duplicates
+- Lets you merge or create new
+
+<Tip>
+  Review flagged duplicates carefully. Sometimes similar discussions result in distinct impacts that should both be tracked.
+</Tip>
+
+## Processing time
+
+Extraction runs as a background job:
+
+| Transcript length | Typical time |
+|-------------------|---------------|
+| Short (< 30 min) | 1-2 minutes |
+| Medium (30-60 min) | 2-5 minutes |
+| Long (> 60 min) | 5-10 minutes |
+
+You'll receive a notification when extraction completes.
+
+## Usage limits
+
+Transcript extraction uses AI credits:
+
+| Plan | Monthly limit |
+|------|---------------|
+| Basic | 10 extractions |
+| Pro | 50 extractions |
+| Enterprise | Unlimited |
+
+View your usage in **Settings** → **AskLeap Usage**.
+
+## Best practices
+
+### Transcript quality
+- Use clear, well-formatted transcripts
+- Include speaker labels when available
+- Remove excessive filler words if editing manually
+
+### Context matters
+- Always provide meeting metadata
+- Select the correct project
+- Include process areas discussed
+
+### Review carefully
+- AI suggestions are starting points
+- Edit impact descriptions for clarity
+- Add missing context from your knowledge

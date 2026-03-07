@@ -1,0 +1,143 @@
+---
+title: Microsoft 365 integration
+description: Sync stakeholders from Microsoft Entra ID to Leap Change
+---
+
+The Microsoft 365 integration enables you to automatically sync stakeholders from your organization's Microsoft Entra ID (formerly Azure AD).
+
+## Prerequisites
+
+- Microsoft 365 account with admin permissions
+- Admin consent for directory read access
+
+## Connecting Microsoft 365
+
+1. Navigate to **Settings** → **Integrations**
+2. Find **Microsoft 365** and click **Connect**
+3. Sign in with your Microsoft account
+4. Grant the requested permissions
+5. If required, request admin consent from your IT administrator
+
+## Admin consent
+
+Some features require admin consent at the tenant level:
+
+<Warning>
+  Without admin consent, you can only sync your own profile. Full stakeholder sync requires Directory.Read.All permission.
+</Warning>
+
+### Requesting admin consent
+
+1. Click **Request admin consent** in the integration settings
+2. Your IT admin will receive a request
+3. Once approved, all sync features become available
+
+## Syncing stakeholders
+
+### Full sync
+
+Import all users from your Microsoft directory:
+
+1. Go to **Settings** → **Integrations** → **Microsoft 365**
+2. Click **Sync now**
+3. Choose sync options:
+   - **Merge strategy**: How to handle conflicts
+   - **Groups to sync**: Filter by Entra groups
+4. Monitor progress in the sync log
+
+### Delta sync
+
+Only sync changes since the last sync:
+
+- Faster than full sync
+- Captures new users, updates, and deletions
+- Enabled automatically for scheduled syncs
+
+### Scheduled sync
+
+Automate stakeholder synchronization:
+
+| Frequency | Description |
+|-----------|-------------|
+| Manual | Sync on-demand only |
+| Daily | Once per day |
+| Twice daily | Every 12 hours |
+| Weekly | Once per week |
+
+## Merge strategies
+
+When stakeholder data exists in both systems, choose how to handle conflicts:
+
+| Strategy | Behavior |
+|----------|----------|
+| **Entra wins** | Microsoft data overwrites Leap Change data |
+| **Leap wins** | Leap Change data is preserved |
+| **Skip conflicts** | Don't update records with conflicts |
+
+## Group-based filtering
+
+Sync only specific groups:
+
+1. In sync settings, click **Configure groups**
+2. Select the Entra groups to include
+3. Only members of selected groups will be synced
+
+This is useful for:
+
+- Syncing only affected departments
+- Excluding external users
+- Limiting sync scope for large directories
+
+## Synced data
+
+The following fields are synced from Microsoft Entra:
+
+| Entra field | Leap Change field |
+|-------------|-------------------|
+| displayName | Name |
+| mail | Email |
+| jobTitle | Job role |
+| department | Department |
+| officeLocation | Location |
+| mobilePhone | Phone |
+| manager | Manager |
+| photo | Profile photo |
+| country | Country |
+
+## Sync history
+
+View past sync operations:
+
+1. Go to **Settings** → **Integrations** → **Microsoft 365**
+2. Click **View sync history**
+3. See details for each sync:
+   - Stakeholders created
+   - Stakeholders updated
+   - Stakeholders removed (soft deactivation)
+   - Errors encountered
+
+## Soft deactivation
+
+When users are removed from Entra:
+
+- They are not deleted from Leap Change
+- They are marked as inactive
+- Historical data is preserved
+- They won't appear in active stakeholder lists
+
+## Troubleshooting
+
+### Sync fails with permission error
+
+Ensure admin consent has been granted for Directory.Read.All.
+
+### Some users not syncing
+
+Check if:
+- Group filtering is excluding them
+- They have required attributes (email is required)
+- They are members, not guests
+
+### Profile photos not appearing
+
+Photo sync requires additional permissions. Ensure User.Read.All is granted.

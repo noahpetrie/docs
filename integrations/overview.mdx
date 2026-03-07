@@ -1,0 +1,94 @@
+---
+title: Integrations overview
+description: Connect Leap Change with your existing tools and systems
+---
+
+Leap Change integrates with popular business tools to streamline your change management workflows.
+
+## Available integrations
+
+<CardGroup cols={2}>
+  <Card title="Microsoft 365" icon="microsoft" href="/integrations/microsoft-365">
+    Sync stakeholders from Microsoft Entra ID and manage user data
+  </Card>
+  <Card title="Microsoft Teams" icon="comments" href="/integrations/microsoft-teams">
+    Send notifications and collaborate with your team
+  </Card>
+  <Card title="Slack" icon="slack" href="/integrations/slack">
+    Receive change notifications in Slack channels
+  </Card>
+  <Card title="Jira" icon="jira">
+    Link change impacts to Jira issues (coming soon)
+  </Card>
+</CardGroup>
+
+## Benefits of integrations
+
+### Stakeholder synchronization
+
+Automatically import and keep stakeholder data up-to-date from your identity provider:
+
+- Sync from Microsoft Entra ID (Azure AD)
+- Pull user details like name, email, department, job title
+- Import profile photos
+- Sync group memberships
+
+### Communication channels
+
+Reach stakeholders where they work:
+
+- Send survey invitations via Teams or Slack
+- Post change notifications to channels
+- Track message delivery
+
+### Workflow automation
+
+Reduce manual work:
+
+- Auto-populate stakeholder records
+- Trigger notifications on key events
+- Keep data synchronized across systems
+
+## Setting up integrations
+
+1. Navigate to **Settings** → **Integrations**
+2. Find the integration you want to enable
+3. Click **Connect**
+4. Follow the authorization flow
+5. Configure integration settings
+
+## Required permissions
+
+Each integration requires specific permissions:
+
+| Integration | Permissions needed |
+|-------------|-------------------|
+| Microsoft 365 | User.Read, Directory.Read.All (with admin consent) |
+| Microsoft Teams | Channel.ReadBasic.All, ChannelMessage.Send |
+| Slack | channels:read, chat:write |
+
+<Note>
+  Admin consent is required for some Microsoft 365 permissions. Contact your IT administrator if you cannot complete the authorization.
+</Note>
+
+## Managing integrations
+
+### Viewing status
+
+The integrations page shows:
+
+- Connection status (Connected/Disconnected)
+- Last sync time
+- Sync history and logs
+
+### Disconnecting
+
+1. Go to **Settings** → **Integrations**
+2. Find the connected integration
+3. Click **Disconnect**
+4. Confirm the disconnection
+
+Disconnecting an integration:
+- Stops future syncs
+- Preserves existing data in Leap Change
+- Revokes access tokens
