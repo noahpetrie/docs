@@ -3,69 +3,131 @@ title: Engagement tracking
 description: Monitor and improve stakeholder engagement
 ---
 
-Leap Change tracks stakeholder engagement to help you identify who needs attention and measure the effectiveness of your change activities.
+Engagement tracking helps you understand how stakeholders interact with your change initiatives. Track influence, support, readiness, and communication patterns to ensure successful change adoption.
 
 ## Engagement metrics
 
-### Engagement score
+### Influence level
 
-Each stakeholder has an engagement score from 0-100, calculated from:
-
-- Survey responses
-- Communication interactions
-- Meeting participation
-- Activity history
-
-### Readiness levels
-
-Stakeholders are categorized into readiness levels:
+How much power a stakeholder has over the change's success:
 
 | Level | Description |
 |-------|-------------|
-| **Champion** | Actively supports and advocates for the change |
-| **Ready** | Prepared and willing to adopt the change |
-| **Aware** | Understands the change but needs more support |
-| **Resistant** | Skeptical or opposed to the change |
+| **High** | Key decision makers, executives, or those who can block the change |
+| **Medium** | Team leads, managers, or subject matter experts |
+| **Low** | Individual contributors with limited formal authority |
 
-Readiness levels are updated based on survey responses and manual assessment.
+### Support level
 
-### Influence and support
+The stakeholder's current stance on the change:
 
-- **Influence** - The stakeholder's ability to affect others (Low, Medium, High)
-- **Support level** - Their current stance on the change (from Resistant to Champion)
+| Level | Description |
+|-------|-------------|
+| **Supportive** | Actively supports the change, may advocate to others |
+| **Neutral** | Neither supports nor resists, needs more information |
+| **Resistant** | Opposes the change, may actively work against it |
 
-## Monitoring engagement
+### Readiness level
 
-### Stakeholder table
+How prepared the stakeholder is for the change:
 
-Use filters in the stakeholder table to identify:
+| Level | Description |
+|-------|-------------|
+| **Champion** | Fully ready, can help others adopt the change |
+| **Ready** | Understands and accepts the change, prepared to adopt |
+| **Aware** | Knows about the change but not fully prepared |
+| **Resistant** | Not ready or willing to adopt the change |
 
-- Low engagement scores
-- Resistant stakeholders
-- Stakeholders who haven't been contacted recently
-- High-influence stakeholders needing attention
+### Engagement score
 
-### Reports
+A calculated score (0-100) based on:
 
-The [Stakeholder Impact Analysis](/reports/stakeholder-impact) report provides:
+- Survey response rates
+- Communication interactions
+- Meeting attendance
+- Activity participation
 
-- Engagement distribution across your stakeholder population
-- Readiness breakdown by department or group
-- Trends over time
+## Updating engagement metrics
 
-## Improving engagement
+### Individual updates
+
+1. Open the stakeholder profile
+2. Click on the metric you want to update (Influence, Support, or Readiness)
+3. Select the new level
+4. Changes save automatically
+
+### Inline editing
+
+In the stakeholder table:
+
+1. Find the stakeholder row
+2. Click the current level in the column
+3. Select a new value from the dropdown
+
+### Bulk updates
+
+1. Select multiple stakeholders using checkboxes
+2. Click **Bulk Edit** in the actions bar
+3. Choose the metric to update
+4. Select the new value
+5. Apply to all selected stakeholders
+
+## Activity timeline
+
+The stakeholder activity timeline tracks all interactions:
+
+### Automatic tracking
+
+- **Surveys** - Invitations sent and responses received
+- **Communications** - Emails and messages sent
+- **Meetings** - Scheduled interactions
+- **Teams messages** - Channel mentions (if Microsoft Teams integration enabled)
+
+### Manual activities
+
+Add manual activity entries:
+
+1. Open the stakeholder profile
+2. Navigate to the **Activity** tab
+3. Click **Add Activity**
+4. Enter activity details:
+   - Type (Meeting, Call, Email, Note)
+   - Date and time
+   - Description
+   - Outcome
+
+## Power-interest grid
+
+Visualize stakeholder engagement using the power-interest grid in **Reports** → **Stakeholder Impact Analysis**:
+
+### Quadrants
+
+| Quadrant | Influence | Interest | Strategy |
+|----------|-----------|----------|----------|
+| **Manage Closely** | High | High | Engage regularly, involve in decisions |
+| **Keep Satisfied** | High | Low | Keep informed, minimal day-to-day involvement |
+| **Keep Informed** | Low | High | Regular updates, leverage as advocates |
+| **Monitor** | Low | Low | Minimal effort, periodic check-ins |
+
+### Interpreting the grid
+
+- **Ideal**: High engagement (top-right quadrant) for key stakeholders
+- **Concern**: High-influence stakeholders in resistance mode
+- **Opportunity**: Potential champions in "Keep Informed" quadrant
+
+## Best practices
 
 <AccordionGroup>
-  <Accordion title="Target communications">
-    Use stakeholder segments to send relevant, personalized communications instead of one-size-fits-all messages.
+  <Accordion title="Assess early and often">
+    Evaluate engagement metrics at project start and update regularly throughout the change lifecycle.
   </Accordion>
-  <Accordion title="Address concerns directly">
-    Review survey responses and notes to understand specific concerns, then address them in follow-up communications.
+  <Accordion title="Focus on high-influence stakeholders">
+    Prioritize engagement efforts on those with the power to make or break the change.
   </Accordion>
-  <Accordion title="Leverage champions">
-    Identify high-influence champions and involve them in communicating the change to others.
+  <Accordion title="Track engagement trends">
+    Monitor how metrics change over time to identify emerging resistance or growing support.
   </Accordion>
-  <Accordion title="Regular check-ins">
-    Set up recurring surveys to track readiness changes over time.
+  <Accordion title="Act on resistance signals">
+    When support drops, investigate root causes and adjust your engagement strategy.
   </Accordion>
 </AccordionGroup>

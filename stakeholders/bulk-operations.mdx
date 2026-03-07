@@ -1,67 +1,135 @@
 ---
 title: Bulk operations
-description: Update multiple stakeholders at once
+description: Update multiple stakeholders efficiently
 ---
 
-Bulk operations let you efficiently update many stakeholders simultaneously.
+Bulk operations let you make changes to multiple stakeholders at once, saving time when managing large groups.
 
 ## Selecting stakeholders
 
-1. Go to **Stakeholders** table view
-2. Use checkboxes to select stakeholders:
-   - Click individual checkboxes
-   - Click the header checkbox to select all visible
-   - Apply filters first to narrow your selection
+### Manual selection
 
-## Available operations
+1. Navigate to the **Stakeholders** table view
+2. Click the checkbox next to each stakeholder you want to select
+3. Or click the header checkbox to select all visible stakeholders
 
-With stakeholders selected, click **Bulk Actions** to access:
+### Select with filters
 
-### Edit fields
+1. Apply filters to narrow down stakeholders (department, project, location, etc.)
+2. Select the filtered stakeholders
+3. Perform bulk actions on the filtered set
 
-Update common fields across selected stakeholders:
+## Available bulk actions
 
-- Influence level
-- Support level
-- Readiness level
-- Department
-- Location
+When stakeholders are selected, a bulk actions bar appears at the bottom of the screen.
 
-### Assign to project
+### Bulk edit
 
-Link selected stakeholders to a project:
+Update fields for all selected stakeholders:
 
-1. Click **Assign to Project**
-2. Select the target project
-3. Confirm the assignment
+1. Click **Bulk Edit**
+2. Choose the field to update:
+   - **Project** - Assign to a project
+   - **Department** - Update department
+   - **Business unit** - Update business unit
+   - **Location** - Update location
+   - **Country** - Update country
+   - **Influence level** - Set influence
+   - **Support level** - Set support
+   - **Readiness level** - Set readiness
+3. Select or enter the new value
+4. Click **Apply** to update all selected stakeholders
+
+<Warning>
+  Bulk edits cannot be undone. Review your selection carefully before applying changes.
+</Warning>
 
 ### Add to group
 
-Add stakeholders to a group:
+Add selected stakeholders to one or more groups:
 
 1. Click **Add to Group**
-2. Select the target group
-3. Confirm
+2. Select the target group(s)
+3. Click **Add**
+
+### Add to project
+
+Assign selected stakeholders to a project:
+
+1. Click **Add to Project**
+2. Select the project
+3. Click **Add**
+
+### Send communication
+
+Initiate a communication to selected stakeholders:
+
+1. Click **Send Message**
+2. Choose the channel (Email, Teams, Slack)
+3. Compose and send the message
 
 ### Delete
 
 Remove selected stakeholders:
 
 1. Click **Delete**
-2. Review the list
-3. Confirm deletion
+2. Confirm the deletion
 
 <Warning>
-  Deleting stakeholders removes them from all projects, surveys, and historical data. This action cannot be undone.
+  Deleting stakeholders is permanent. Associated data (survey responses, activities) will also be deleted.
 </Warning>
 
 ## Export
 
-Export stakeholder data for external use:
+Export selected stakeholders to CSV:
 
 1. Select stakeholders (or select all)
 2. Click **Export**
-3. Choose format (CSV)
-4. Download the file
+3. Choose export options:
+   - All fields or selected columns
+   - Include project assignments
+4. Download the CSV file
 
-Exports include all stakeholder fields and group memberships.
+## Custom table views
+
+Save filtered views for quick access to common stakeholder segments:
+
+### Creating a view
+
+1. Apply filters and column settings
+2. Click **Save View**
+3. Name the view
+4. Choose visibility:
+   - **Personal** - Only you can see it
+   - **Shared** - All team members can access it
+5. Save
+
+### Using saved views
+
+1. Click the view dropdown (shows current view name)
+2. Select a saved view
+3. The table updates with saved filters and columns
+
+### Managing views
+
+- **Edit** - Update filters or columns
+- **Rename** - Change the view name
+- **Delete** - Remove the view
+- **Set as default** - Load this view when opening Stakeholders
+
+## Best practices
+
+<AccordionGroup>
+  <Accordion title="Use filters before bulk edits">
+    Apply filters to isolate the exact stakeholders you want to update, then select all filtered results.
+  </Accordion>
+  <Accordion title="Review before applying">
+    Check the selection count and review a few stakeholders before applying bulk changes.
+  </Accordion>
+  <Accordion title="Create views for common segments">
+    Save views for frequently-accessed groups like "Leadership Team" or "IT Department" for quick access.
+  </Accordion>
+  <Accordion title="Export before major changes">
+    Export stakeholder data before making significant bulk edits as a backup.
+  </Accordion>
+</AccordionGroup>

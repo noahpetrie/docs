@@ -11,29 +11,37 @@ Access Settings from the gear icon in the sidebar. Settings are organized into p
 
 Configure your personal information:
 
-- First and last name
-- Email address
-- Avatar/profile photo
-- Job role and bio
-- Phone number and LinkedIn
+- **First and last name** - Display name throughout the app
+- **Email address** - Login and notification email
+- **Avatar/profile photo** - Upload a profile picture
+- **Job role** - Your position in the organization
+- **Company** - Your company name
+- **Phone number** - Contact number with country code
+- **Country** - Your location
+- **LinkedIn profile** - Professional profile link
 
-### Preferences
+### Time preferences
 
 Set your display preferences:
 
-- **Timezone** - Your local timezone
+- **Timezone** - Your local timezone for dates and times
 - **Date format** - MM/DD/YYYY or DD/MM/YYYY
 - **Time format** - 12-hour or 24-hour
 - **Week start** - Sunday or Monday
-- **Language** - English or French
+
+### Language
+
+Choose your interface language:
+
+- English
+- French
 
 ### Appearance
 
 Customize the interface:
 
-- Theme (light, dark, system)
-- Accent color
-- Display density
+- **Theme** - Light, Dark, or System (follows OS setting)
+- **Accent color** - Choose from Blue, Purple, Green, Orange, Red, Yellow
 
 ## Organization settings
 
@@ -41,36 +49,40 @@ Customize the interface:
   Organization settings require admin role.
 </Note>
 
-### General
+### Organization details
 
 Configure organization-level settings:
 
 - Organization name
+- Organization description
 - Billing email
-- Default settings for new projects
 
 ### Team management
 
-Manage your team:
+Manage your team members:
 
-- View all members
-- Invite new members
-- Assign roles (admin, member)
-- Remove members
+- View all members and their roles
+- Invite new members via email
+- Assign roles (Admin or Member)
+- Remove members from the organization
+- Track pending invitations
+
+[Learn more about team management](/settings/team-management)
 
 ### Billing
 
-Manage subscription:
+Manage subscription and payments:
 
-- Current plan
-- Usage statistics
-- Upgrade/downgrade
-- Payment methods
-- Invoice history
+- View current plan and usage
+- Upgrade or downgrade plans
+- Manage payment methods
+- View invoice history
+
+[Learn more about billing](/settings/billing)
 
 ## Integrations
 
-Connect external services:
+Connect external services to extend Leap Change functionality:
 
 <CardGroup cols={2}>
   <Card title="Microsoft 365" icon="microsoft" href="/settings/integrations#microsoft-365">
@@ -79,11 +91,30 @@ Connect external services:
   <Card title="Microsoft Teams" icon="message" href="/settings/integrations#microsoft-teams">
     Send messages and monitor channels
   </Card>
+  <Card title="Slack" icon="slack" href="/settings/integrations#slack">
+    Connect Slack workspace for notifications
+  </Card>
 </CardGroup>
 
-### Coming soon
+[Learn more about integrations](/settings/integrations)
 
-- Slack integration
-- Jira integration
-- ServiceNow integration
-- Custom webhooks
+## AskLeap usage
+
+Monitor your AI feature consumption:
+
+- Requests used this month
+- Quota remaining by plan
+- Usage breakdown by feature
+- Per-member usage tracking
+- Historical usage trends
+
+Access from **Settings** → **AskLeap Usage**
+
+## Coming soon
+
+Additional settings in development:
+
+- Custom notification preferences
+- API access tokens
+- Webhook configuration
+- SSO/SAML configuration

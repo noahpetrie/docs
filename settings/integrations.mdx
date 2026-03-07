@@ -7,7 +7,7 @@ Leap Change integrates with external platforms to streamline your workflow and k
 
 ## Microsoft 365
 
-Connect to Microsoft 365 (Azure AD / Entra ID) to sync users as stakeholders.
+Connect to Microsoft 365 (Azure AD / Entra ID) to sync users as stakeholders and leverage Microsoft's ecosystem.
 
 ### Connecting
 
@@ -21,12 +21,12 @@ Connect to Microsoft 365 (Azure AD / Entra ID) to sync users as stakeholders.
 
 The integration requests:
 
-- Read user profiles
-- Read group memberships
-- Send mail (for notifications)
+- **User.Read.All** - Read user profiles from your directory
+- **Group.Read.All** - Read group memberships
+- **offline_access** - Maintain connection without re-authentication
 
 <Note>
-  Admin consent may be required depending on your organization's policies.
+  Admin consent may be required depending on your organization's Azure AD policies.
 </Note>
 
 ### Stakeholder sync
@@ -37,7 +37,7 @@ Once connected, configure how users sync to stakeholders:
 
 | Option | Description |
 |--------|-------------|
-| Manual | Sync only when you click the button |
+| Manual | Sync only when you click "Sync Now" |
 | Daily | Automatic sync once per day |
 | Twice daily | Sync morning and evening |
 | Weekly | Sync once per week |
@@ -49,7 +49,7 @@ When a synced user already exists as a stakeholder:
 | Strategy | Behavior |
 |----------|----------|
 | Entra wins | Microsoft data overwrites Leap Change data |
-| Leap wins | Keep existing Leap Change data |
+| Leap wins | Keep existing Leap Change data, only fill empty fields |
 | Skip conflicts | Don't update conflicting records |
 
 #### Group filtering
@@ -60,22 +60,35 @@ Limit sync to specific Entra ID groups:
 2. Select which groups to include
 3. Only members of selected groups will sync
 
+This is useful for syncing only relevant departments or teams.
+
 #### Group sync
 
 Optionally sync Entra groups as stakeholder groups:
 
 - Creates matching groups in Leap Change
 - Maintains membership automatically
-- Updates on each sync
+- Updates on each sync cycle
+
+Enable this in the integration settings.
 
 ### Viewing sync status
 
 The integration page shows:
 
-- Last sync time
-- Records synced
-- Any errors encountered
-- Sync history log
+- **Connection status** - Connected, disconnected, or error
+- **Last sync time** - When stakeholders were last updated
+- **Records synced** - Count of created and updated stakeholders
+- **Any errors** - Issues encountered during sync
+- **Sync history** - Log of previous sync operations
+
+### Manual sync
+
+Click **Sync Now** to trigger an immediate sync, useful for:
+
+- Initial stakeholder import
+- After organizational changes
+- Verifying sync configuration
 
 ## Microsoft Teams
 
@@ -85,7 +98,7 @@ Send messages and monitor Teams channels for change-related discussions.
 
 1. In **Settings** → **Integrations**, find Microsoft Teams
 2. Click **Connect**
-3. Authorize the Teams bot
+3. Grant admin consent for the Teams bot
 4. Select default channels (optional)
 
 ### Features
@@ -98,22 +111,50 @@ Send messages to stakeholders via Teams:
 - As part of communication activities
 - For survey invitations
 
+Messages appear as coming from the Leap Change app.
+
 #### Channel monitoring
 
-Monitor channels for change-related discussions:
+Monitor channels for stakeholder activity:
 
-- Configure keywords to watch
-- Receive notifications when mentioned
-- Capture insights for impact analysis
+1. Click **Add Channel** in Teams settings
+2. Select the Team and Channel to monitor
+3. Channel messages involving stakeholders are tracked
 
-### Teams bot
+Activity appears on stakeholder timelines, helping you understand engagement.
 
-The Leap Change bot can:
+#### Removing channels
 
-- Respond to queries about changes
-- Provide stakeholder lookup
-- Send scheduled notifications
-- Support interactive workflows
+1. View monitored channels list
+2. Click **Remove** next to a channel
+3. Confirm removal
+
+## Slack
+
+Connect Slack to receive notifications and send messages.
+
+### Connecting
+
+1. In **Settings** → **Integrations**, find Slack
+2. Click **Connect Slack Workspace**
+3. Authorize the Leap Change app
+4. Select notification channels
+
+### Notification events
+
+Configure which events trigger Slack notifications:
+
+- Change impact created
+- Survey launched
+- Project status changed
+- High-priority updates
+
+### Send to channels
+
+Choose where notifications appear:
+
+- Specific channel (e.g., #change-management)
+- Direct messages to stakeholders
 
 ## Troubleshooting
 
@@ -121,10 +162,11 @@ The Leap Change bot can:
 
 If integration fails:
 
-1. Check admin permissions
+1. Check admin permissions in Azure/Microsoft 365
 2. Verify network access to Microsoft services
 3. Re-authorize if tokens expired
-4. Contact support if issues persist
+4. Check for conditional access policies blocking the app
+5. Contact support if issues persist
 
 ### Sync errors
 
@@ -132,7 +174,14 @@ Common sync issues:
 
 | Error | Solution |
 |-------|----------|
-| User not found | User may have been deleted in Entra |
-| Permission denied | Check app permissions in Azure |
-| Rate limited | Wait and retry automatically |
-| Invalid data | Check user profile completeness |
+| User not found | User may have been deleted in Entra ID |
+| Permission denied | Check app permissions in Azure portal |
+| Rate limited | Sync will retry automatically |
+| Invalid data | Check user profile completeness in Microsoft 365 |
+| Group not found | Group may have been deleted or renamed |
+
+### Teams bot not responding
+
+1. Verify admin consent was granted
+2. Check that the bot is installed in your Teams tenant
+3. Try removing and re-adding the integration
