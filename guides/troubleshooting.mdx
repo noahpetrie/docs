@@ -1,0 +1,143 @@
+---
+title: Troubleshooting
+description: Common issues and solutions for Leap Change
+icon: wrench
+---
+
+This guide covers common issues you might encounter and how to resolve them.
+
+## Sign-in issues
+
+### Can't sign in with correct password
+
+1. Ensure Caps Lock is off
+2. Try resetting your password via **Forgot password?**
+3. Clear your browser cache and cookies
+4. Try a different browser
+
+### Password reset email not received
+
+- Check your spam/junk folder
+- Verify you're using the correct email address
+- Add `noreply@leapchange.io` to your email whitelist
+- Wait a few minutes and try again
+
+### Session expired unexpectedly
+
+For security, sessions expire after a period of inactivity:
+
+- Sign in again to continue working
+- Your unsaved changes may be lost—save frequently
+- If this happens frequently, check your browser's cookie settings
+
+## Data and sync issues
+
+### Stakeholders not appearing after import
+
+1. Verify your CSV file format matches the template
+2. Check that email addresses are valid
+3. Review the import error log for specific issues
+4. Ensure the file is UTF-8 encoded
+
+### Microsoft 365 sync not working
+
+1. Go to **Settings** → **Integrations**
+2. Check the sync status and error messages
+3. Re-authorize the connection if tokens have expired
+4. Verify you have admin permissions in your Microsoft tenant
+5. Check that API permissions are correctly configured in Azure
+
+### Survey responses missing
+
+- Ensure the survey is set to **Open** status
+- Check if stakeholders have valid email addresses
+- Verify invitation emails were delivered (not in spam)
+- Confirm the response token links haven't expired
+
+## Performance issues
+
+### Pages loading slowly
+
+1. Check your internet connection
+2. Clear browser cache
+3. Disable browser extensions temporarily
+4. Try a different browser
+5. If using a VPN, try disconnecting
+
+### Browser freezing on large datasets
+
+When working with many stakeholders or impacts:
+
+- Use filters to reduce displayed items
+- Export data and work offline for bulk analysis
+- Close other browser tabs to free memory
+- Try the Chrome or Edge browser for best performance
+
+## Email delivery issues
+
+### Survey invitations not sending
+
+1. Verify recipient email addresses are valid
+2. Check that your email quota hasn't been exceeded
+3. Review the scheduled emails queue in survey settings
+4. Ensure the survey is in **Open** status
+
+### Communication emails bouncing
+
+- Validate stakeholder email addresses
+- Check if the recipient's mail server is blocking bulk emails
+- Consider using your organization's email domain for sending
+
+## Integration issues
+
+### Microsoft Teams bot not responding
+
+1. Verify the Teams integration is connected
+2. Check that the bot is installed in the correct channels
+3. Re-authorize the integration if needed
+4. Ensure your Teams admin hasn't blocked the bot
+
+### Calendar export not working
+
+1. Try downloading the ICS file directly
+2. Check browser download settings
+3. Verify the file extension is `.ics`
+4. Import manually into your calendar app
+
+## Report issues
+
+### Stakeholder map not showing locations
+
+- Verify stakeholders have location data populated
+- Use standard location formats (City, Country)
+- Wait for geocoding to process new locations
+- Check that locations are valid and recognizable
+
+### Export failing
+
+1. Try exporting a smaller dataset first
+2. Check available disk space
+3. Disable popup blockers for downloads
+4. Try a different export format
+
+## Getting help
+
+If these solutions don't resolve your issue:
+
+### Contact support
+
+- Email: support@leapchange.io
+- Include:
+  - Your organization name
+  - Description of the issue
+  - Steps to reproduce
+  - Screenshots if applicable
+  - Browser and operating system
+
+### Check system status
+
+Visit our status page for known outages or maintenance windows.
+
+<Tip>
+  Before contacting support, check your browser's developer console (F12) for error messages—this information helps us resolve issues faster.
+</Tip>
