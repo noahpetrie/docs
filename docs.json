@@ -10,7 +10,15 @@
   "navigation": {
     "groups": [
       {
-        "group": "Getting Started",
+        "group": "Getting started",
+        "pages": [
+          "getting-started/introduction",
+          "getting-started/quickstart",
+          "getting-started/concepts"
+        ]
+      },
+      {
+        "group": "Features",
         "pages": [
           "getting-started/introduction",
           "getting-started/quickstart",
@@ -84,6 +92,13 @@
           "settings/integrations",
           "settings/team-management",
           "settings/billing"
+        ]
+      },
+      {
+        "group": "Guides",
+        "pages": [
+          "guides/organization-setup",
+          "guides/import-export"
         ]
       }
     ]

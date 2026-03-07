@@ -1,0 +1,136 @@
+---
+title: Import and export data
+description: Bulk import stakeholders and export your change management data
+icon: arrow-right-arrow-left
+---
+
+Leap Change supports bulk data operations to help you get started quickly and extract data when needed.
+
+## Importing stakeholders
+
+Bulk import stakeholders from a CSV file.
+
+### Preparing your file
+
+1. Download the CSV template from the import dialog
+2. Fill in your stakeholder data following the column format:
+
+| Column | Required | Description |
+|--------|----------|-------------|
+| name | Yes | Full name |
+| email | Yes | Email address |
+| role | No | Job title |
+| department | No | Department/team |
+| phone | No | Phone number |
+| location | No | Office location |
+| influence | No | high/medium/low |
+| support | No | champion/supporter/neutral/resistant |
+| interest | No | high/medium/low |
+| external_id | No | ID from external system |
+
+3. Save as UTF-8 encoded CSV
+
+### Importing
+
+1. Go to **Stakeholders**
+2. Click **Import**
+3. Upload your CSV file
+4. Map columns if needed
+5. Review the preview
+6. Click **Import**
+
+### Handling duplicates
+
+During import, choose how to handle existing records:
+
+- **Skip**: Ignore rows that match existing stakeholders
+- **Update**: Overwrite existing data with imported values
+- **Create duplicate**: Add as new record regardless
+
+Matching is done by email address.
+
+### Import validation
+
+The system validates your data before import:
+
+- Required fields present
+- Email format valid
+- Values match expected options (e.g., influence levels)
+
+Errors are displayed for correction before proceeding.
+
+## Exporting data
+
+### Stakeholder export
+
+1. Go to **Stakeholders**
+2. Apply any filters (optional)
+3. Click **Export**
+4. Choose format (CSV)
+5. Download the file
+
+### Change impact export
+
+1. Go to **Change impacts**
+2. Apply filters as needed
+3. Click **Export**
+4. Download the CSV
+
+### Survey results export
+
+1. Open the survey
+2. Click **View results**
+3. Click **Export**
+4. Download response data
+
+### Report exports
+
+Many reports can be exported:
+
+1. Generate the report
+2. Click **Export**
+3. Choose format
+4. Download
+
+## Data formats
+
+### CSV files
+
+Comma-separated values files that can be opened in:
+
+- Microsoft Excel
+- Google Sheets
+- Numbers
+- Any text editor
+
+<Tip>
+  When opening CSVs in Excel, use **Data** > **From Text/CSV** for best results with special characters.
+</Tip>
+
+## Integration considerations
+
+### External IDs
+
+Use the `external_id` field to maintain links to your source systems:
+
+- HR systems (employee IDs)
+- CRM systems (contact IDs)
+- Other change management tools
+
+This enables you to:
+
+- Update records via import using external ID as the key
+- Maintain data lineage
+- Support future integrations
+
+### Data synchronization
+
+For ongoing synchronization with external systems:
+
+1. Export data periodically
+2. Process in your integration tool
+3. Re-import with updates
+
+<Note>
+  API access for automated integration may be available on enterprise plans. Contact support for details.
+</Note>
