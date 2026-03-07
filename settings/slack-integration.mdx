@@ -1,0 +1,78 @@
+---
+title: Slack integration
+description: Connect Leap Change with Slack for notifications
+---
+
+Integrate Slack to receive real-time notifications about change management activities in your Slack workspace.
+
+<Note>
+  Slack integration configuration requires admin role.
+</Note>
+
+## Connecting Slack
+
+1. Go to **Settings** → **Integrations**
+2. Find the Slack section
+3. Click **Connect to Slack**
+4. Authorize Leap Change in your Slack workspace
+5. Select which channels to use for notifications
+6. Save your configuration
+
+## Notification settings
+
+Configure which events trigger Slack notifications:
+
+### Available notifications
+
+| Event | Description |
+|-------|-------------|
+| **Change impact created** | New impact added to any project |
+| **Survey launched** | Survey opened for responses |
+| **Project updated** | Significant project changes |
+
+### Channel configuration
+
+For each notification type:
+
+1. Toggle the notification on or off
+2. Select the target Slack channel
+3. Optionally add additional channels
+
+## Notification format
+
+Slack notifications include:
+
+- Event type and timestamp
+- Brief description
+- Link to the relevant item in Leap Change
+- Responsible team member (when applicable)
+
+## Managing the integration
+
+### Updating channels
+
+1. Go to **Settings** → **Integrations** → **Slack**
+2. Modify channel assignments
+3. Changes save automatically
+
+### Disconnecting
+
+1. Go to **Settings** → **Integrations** → **Slack**
+2. Click **Disconnect**
+3. Confirm disconnection
+
+Disconnecting stops all Slack notifications. Your Slack message history is preserved.
+
+## Troubleshooting
+
+### Notifications not appearing
+
+- Verify the Leap Change bot is in the target channel
+- Check notification toggles are enabled
+- Ensure you have the correct channel selected
+
+### Connection issues
+
+- Re-authorize if your Slack admin changed permissions
+- Verify your Slack workspace allows third-party integrations
+- Contact your Slack workspace admin if authorization fails
