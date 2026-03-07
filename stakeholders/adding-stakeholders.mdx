@@ -3,7 +3,7 @@ title: Adding stakeholders
 description: Import or manually add stakeholders to Leap Change
 ---
 
-You can add stakeholders to Leap Change individually or in bulk.
+You can add stakeholders to Leap Change individually, in bulk via CSV, or by syncing from Microsoft 365.
 
 ## Manual entry
 
@@ -16,12 +16,15 @@ You can add stakeholders to Leap Change individually or in bulk.
 | First name | Yes | Stakeholder's first name |
 | Last name | Yes | Stakeholder's last name |
 | Email | No | Contact email address |
-| Phone | No | Phone number |
+| Phone | No | Phone number with country code |
 | Department | No | Business department |
+| Business unit | No | Organizational business unit |
 | Role | No | Job title or role |
 | Location | No | Office location |
+| Country | No | Geographic location |
 | Influence | No | Low, Medium, or High |
-| Support level | No | Current stance on change |
+| Support level | No | Supportive, Neutral, or Resistant |
+| Readiness level | No | Champion, Ready, Aware, or Resistant |
 
 4. Click **Save** to create the stakeholder
 5. Optionally assign to projects immediately
@@ -35,23 +38,32 @@ For bulk import, prepare a CSV file with your stakeholder data.
 Your CSV should include headers matching Leap Change fields:
 
 ```csv
-first_name,last_name,email,department,role,location,influence,support_level
-John,Smith,john.smith@example.com,Finance,Manager,New York,High,Supportive
-Jane,Doe,jane.doe@example.com,HR,Director,London,Medium,Neutral
+first_name,last_name,email,department,business_unit,role,location,country,influence,support_level,readiness_level
+John,Smith,john.smith@example.com,Finance,Corporate,Manager,New York,US,High,Supportive,Ready
+Jane,Doe,jane.doe@example.com,HR,Corporate,Director,London,GB,Medium,Neutral,Aware
 ```
 
 ### Import steps
 
 1. Go to **Stakeholders**
-2. Click **Import** → **CSV**
-3. Upload your CSV file
-4. **Map columns** - Match CSV columns to Leap Change fields
-5. **Preview** - Review the data to be imported
-6. **Import** - Confirm to create stakeholders
+2. Click the **Actions** menu (three dots)
+3. Select **Import CSV**
+4. **Upload** your CSV file
+5. **Map columns** - Match CSV columns to Leap Change fields
+6. **Preview** - Review the data to be imported
+7. **Import** - Confirm to create stakeholders
 
 <Warning>
   Duplicates are detected by email address. Existing stakeholders with matching emails will be updated, not duplicated.
 </Warning>
+
+### Handling import errors
+
+If some rows fail to import:
+
+- Check for missing required fields (first/last name)
+- Verify email format is valid
+- Ensure dropdown values match expected options (e.g., "High" not "Very High")
 
 ## Microsoft 365 sync
 
@@ -60,20 +72,37 @@ If you have Microsoft 365 integration enabled, you can sync users from your orga
 1. Go to **Settings** → **Integrations**
 2. Connect your Microsoft 365 account
 3. Configure sync settings:
-   - **Merge strategy** - How to handle conflicts
-   - **Sync frequency** - Manual, daily, or weekly
-   - **Filter by groups** - Sync specific Entra groups
+   - **Merge strategy** - How to handle conflicts (Entra wins, Leap wins, Skip conflicts)
+   - **Sync frequency** - Manual, daily, twice daily, or weekly
+   - **Filter by groups** - Sync only specific Entra ID groups
+   - **Group sync** - Optionally sync Entra groups as stakeholder groups
 
-See [Microsoft 365 integration](/settings/integrations#microsoft-365) for details.
+4. Click **Sync Now** to import users
+
+See [Microsoft 365 integration](/settings/integrations#microsoft-365) for detailed setup.
 
 ## Assigning to projects
 
 After creating stakeholders, link them to relevant projects:
 
+### From stakeholder profile
+
 1. Open the stakeholder profile
-2. Go to the **Projects** tab
+2. Go to the **Projects** section
 3. Click **Assign to Project**
 4. Select one or more projects
 5. Save changes
 
-Alternatively, use bulk operations to assign multiple stakeholders to a project at once.
+### From project view
+
+1. Open a project
+2. Go to the **Stakeholders** tab
+3. Click **Add Stakeholders**
+4. Search and select stakeholders to add
+
+### Using bulk operations
+
+1. Select multiple stakeholders using checkboxes
+2. Click **Bulk Edit** in the actions bar
+3. Choose **Assign to Project**
+4. Select the target project

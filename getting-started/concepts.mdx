@@ -18,6 +18,7 @@ An **initiative** (also called a project) represents a specific change effort. E
 - Associated stakeholders
 - Change impacts to manage
 - Communication activities
+- Tasks and milestones
 
 ## Stakeholders
 
@@ -25,19 +26,28 @@ An **initiative** (also called a project) represents a specific change effort. E
 
 | Attribute | Description |
 |-----------|-------------|
-| Influence | How much power they have over the change's success |
-| Support | Their current stance (supporter, neutral, resistant) |
+| Influence | How much power they have over the change's success (Low, Medium, High) |
+| Support | Their current stance (Supportive, Neutral, Resistant) |
 | Interest | How much they care about the change |
+| Readiness | Their preparedness level (Champion, Ready, Aware, Resistant) |
 | Communication preferences | How they prefer to receive information |
 
 ### Power-interest grid
 
 The power-interest grid categorizes stakeholders into four quadrants:
 
-- **High power, high interest**: Manage closely
-- **High power, low interest**: Keep satisfied
-- **Low power, high interest**: Keep informed
-- **Low power, low interest**: Monitor
+- **High power, high interest**: Manage closely - key decision makers and influencers
+- **High power, low interest**: Keep satisfied - executives who need summary updates
+- **Low power, high interest**: Keep informed - advocates who can help spread the message
+- **Low power, low interest**: Monitor - may need occasional updates
+
+### Stakeholder groups
+
+Organize stakeholders into logical groups based on department, location, role, or any custom criteria. Groups make it easier to:
+
+- Send targeted communications
+- Analyze readiness by segment
+- Apply bulk updates
 
 ## Change impacts
 
@@ -65,6 +75,16 @@ A **change impact** describes a specific effect the change will have on people, 
 - **In review**: Being evaluated
 - **Done**: Successfully addressed
 - **Canceled**: No longer relevant
+- **Duplicate**: Merged with another impact
+
+### Mitigation plans
+
+Each impact can have a mitigation plan with action items:
+
+- Define specific actions to address the impact
+- Assign owners to each action
+- Track status (Not Started, In Progress, Blocked, Completed, Canceled)
+- Set due dates
 
 ## Communications
 
@@ -74,28 +94,45 @@ A **communication plan** outlines how you'll engage stakeholders throughout the 
 
 Individual communication actions within a plan:
 
-- Target audience (which stakeholders)
-- Message content
-- Delivery channel (email, meeting, announcement)
-- Schedule and status
+- **Target audience** - Which stakeholders or groups
+- **Message content** - What to communicate
+- **Delivery channel** - Email, meeting, announcement, training
+- **Schedule and status** - When and whether it's complete
+
+### Communication views
+
+- **Gantt chart**: Timeline visualization of all activities
+- **Calendar**: Monthly/weekly view of scheduled communications
+- **List**: Traditional table view with filtering
 
 ## Surveys
 
 **Surveys** collect feedback from stakeholders. Leap Change supports:
 
-- **Single-question surveys**: Quick pulse checks
-- **Comprehensive surveys**: Multi-section assessments
+- **Single-question surveys**: Quick pulse checks (1-10 rating scale)
+- **Comprehensive surveys**: Multi-section assessments with weighted scoring
 
 Surveys can be distributed via unique links or email invitations, with anonymous response options.
+
+## Tasks
+
+**Tasks** are work items managed on a Kanban board. They flow through columns:
+
+- **Planned**: Identified but not ready to start
+- **Up Next**: Ready to begin
+- **In Progress**: Currently being worked on
+- **In Review**: Completed, awaiting validation
+- **Done**: Successfully completed
 
 ## AI assistant
 
 The **AI assistant** (also called AskLeap) provides intelligent support for:
 
-- Analyzing change impacts
-- Identifying risks
-- Suggesting communication strategies
+- Analyzing change impacts from transcripts
+- Suggesting mitigation strategies
+- Generating audience-specific summaries
 - Answering questions about your change data
+- Providing change management guidance
 
 ## Organizations and teams
 

@@ -3,64 +3,123 @@ title: Stakeholder groups
 description: Organize stakeholders into logical groups
 ---
 
-Stakeholder groups help you organize stakeholders for easier management and targeted communications.
+Stakeholder groups help you organize and manage stakeholders with shared characteristics. Groups make it easier to send targeted communications, analyze readiness by segment, and apply bulk updates.
 
-## Group types
+## Accessing groups
 
-Leap Change supports four group types:
-
-| Type | Use case |
-|------|----------|
-| **Functional** | Group by job function (e.g., Managers, IT Support) |
-| **Geographic** | Group by location (e.g., EMEA, North America) |
-| **Hierarchical** | Group by org level (e.g., Executive, Middle Management) |
-| **Custom** | Any grouping that fits your needs |
+Navigate to **Stakeholders** → **Groups** tab to view and manage groups.
 
 ## Creating groups
 
-1. Navigate to **Stakeholders** → **Groups**
-2. Click **Create Group**
-3. Enter group details:
+1. Click **Create Group**
+2. Enter group details:
    - **Name** - Descriptive group name
-   - **Type** - Select from functional, geographic, hierarchical, or custom
-   - **Description** - Optional details about the group
+   - **Description** - Purpose or criteria for the group
+   - **Color** - Visual identifier for the group
+3. Add members:
+   - Search for stakeholders by name
+   - Select multiple stakeholders at once
+   - Use filters to find stakeholders matching criteria
 4. Click **Create**
 
-## Adding members
+## Group types
 
-### From the group
+### Manual groups
 
+Create groups by manually selecting members. Useful for:
+
+- Cross-functional teams
+- Project-specific groups
+- Change champion networks
+- Training cohorts
+
+### Synced groups (Microsoft 365)
+
+If Microsoft 365 integration is enabled with group sync:
+
+- Entra ID groups automatically create corresponding stakeholder groups
+- Membership stays synchronized
+- Updates happen on each sync cycle
+
+<Note>
+  Synced groups show a "Synced from Microsoft 365" badge. Manual edits to membership will be overwritten on the next sync.
+</Note>
+
+## Managing groups
+
+### Edit group
+
+1. Click the group name to open it
+2. Click **Edit Group**
+3. Update name, description, or members
+4. Save changes
+
+### Add members
+
+Multiple ways to add stakeholders to groups:
+
+**From the group page:**
 1. Open the group
 2. Click **Add Members**
 3. Search and select stakeholders
-4. Click **Add**
 
-### From stakeholder profiles
-
+**From stakeholder profile:**
 1. Open a stakeholder profile
-2. Go to the **Groups** section
+2. Find the **Groups** section
 3. Click **Add to Group**
-4. Select one or more groups
+4. Select target groups
 
-### Bulk assignment
+**Using bulk actions:**
+1. Select stakeholders in the table view
+2. Click **Add to Group** in the bulk actions bar
+3. Choose the target group
 
-1. Go to **Stakeholders** table view
-2. Select multiple stakeholders using checkboxes
-3. Click **Bulk Actions** → **Add to Group**
-4. Choose the target group
+### Remove members
+
+1. Open the group
+2. Select members to remove
+3. Click **Remove from Group**
+
+### Delete group
+
+1. Open the group
+2. Click **Delete Group**
+3. Confirm deletion
+
+<Warning>
+  Deleting a group only removes the grouping—stakeholders are not deleted.
+</Warning>
 
 ## Using groups
 
-Groups are useful for:
+### Communications
 
-- **Filtering** - Filter stakeholder tables by group
-- **Surveys** - Send surveys to specific groups
-- **Communications** - Target messages to groups
-- **Change impacts** - Link impacts to affected groups
-- **Reports** - Analyze engagement by group
+Target groups in communication activities:
 
-## Microsoft 365 group sync
+1. Create a communication activity
+2. In **Target Audience**, select **Group**
+3. Choose the group to target
 
-With Microsoft 365 integration, Entra ID groups can sync to stakeholder groups automatically. This keeps your stakeholder groups aligned with your organizational structure.
+### Surveys
 
-Configure group sync in **Settings** → **Integrations** → **Microsoft 365**.
+Send surveys to specific groups:
+
+1. Create or open a survey
+2. Click **Send Invitations**
+3. Filter by group or select a group directly
+
+### Filters
+
+Filter the stakeholder table by group:
+
+1. Open the **Filters** panel
+2. Select **Group** filter
+3. Choose one or more groups
+
+### Reports
+
+Analyze data by group:
+
+- Filter reports by stakeholder group
+- Compare readiness across groups
+- Track engagement by segment

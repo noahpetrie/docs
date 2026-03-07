@@ -20,6 +20,7 @@ Tasks move through these stages:
 | **In Progress** | Currently being worked on |
 | **In Review** | Completed, awaiting validation |
 | **Done** | Successfully completed |
+| **Canceled** | No longer needed |
 
 ### Moving tasks
 
@@ -31,6 +32,10 @@ Drag and drop tasks between columns:
 
 Tasks can also be moved via the task detail view.
 
+### Reordering tasks
+
+Drag tasks within a column to change their priority order. Tasks higher in the column indicate higher priority.
+
 ## Creating tasks
 
 ### Quick add
@@ -39,12 +44,14 @@ Tasks can also be moved via the task detail view.
 2. Enter the task title
 3. Press Enter to create
 
+The task is created in that column with default settings.
+
 ### Detailed creation
 
 1. Click **New Task** button
 2. Fill in task details:
    - **Title** - What needs to be done
-   - **Description** - Additional context
+   - **Description** - Additional context and details
    - **Project** - Associated change initiative
    - **Assignee** - Who is responsible
    - **Due date** - When it should be completed
@@ -58,32 +65,37 @@ Tasks can also be moved via the task detail view.
 Assign tasks to team members:
 
 - Each task has one assignee
-- Assignee receives notifications
-- Filter board by assignee
+- Assignee receives notifications for updates
+- Filter board by assignee to see your work
+- Assignee avatar appears on task card
 
 ### Priority
 
 Set task urgency:
 
-- **High** - Needs immediate attention
-- **Medium** - Standard priority
-- **Low** - Can wait if needed
+| Priority | Use case |
+|----------|----------|
+| **High** | Needs immediate attention, blocking other work |
+| **Medium** | Standard priority, complete within normal timeline |
+| **Low** | Can wait if needed, nice-to-have |
 
 ### Labels
 
 Add labels for categorization:
 
-- Create custom labels
+- Create custom labels with colors
 - Apply multiple labels per task
-- Filter by label
+- Filter board by label
+- Examples: "Training", "Communication", "Technical", "Urgent"
 
 ### Due dates
 
 Set deadlines:
 
 - Overdue tasks highlighted in red
-- Due soon highlighted in yellow
+- Due soon (within 3 days) highlighted in yellow
 - Filter by due date range
+- Sort tasks by due date
 
 ## Filtering and views
 
@@ -91,15 +103,29 @@ Set deadlines:
 
 Filter the board by:
 
-- Assignee
-- Project
-- Priority
-- Labels
-- Due date range
+- **Assignee** - Show tasks for specific team members
+- **Project** - Show tasks for a specific initiative
+- **Priority** - Filter by urgency
+- **Labels** - Filter by categorization
+- **Due date range** - Show tasks due within a period
 
 ### Search
 
-Search tasks by title or description.
+Search tasks by title or description to quickly find specific work items.
+
+### Saved filters
+
+Save commonly-used filter combinations for quick access.
+
+## Task details
+
+Click any task card to open the full detail view:
+
+- **Activity log** - History of changes
+- **Comments** - Discussion thread
+- **Attachments** - Related files
+- **Subtasks** - Break down into smaller items
+- **Related impacts** - Linked change impacts
 
 ## Best practices
 
@@ -111,9 +137,12 @@ Search tasks by title or description.
     Don't have too many tasks "In Progress" at once. Complete current work before starting new items.
   </Accordion>
   <Accordion title="Use labels consistently">
-    Define a standard set of labels for your team and use them consistently.
+    Define a standard set of labels for your team and use them consistently across all tasks.
   </Accordion>
   <Accordion title="Review regularly">
-    Hold regular reviews to move completed tasks and identify blockers.
+    Hold regular reviews to move completed tasks, identify blockers, and prioritize the backlog.
+  </Accordion>
+  <Accordion title="Link to change impacts">
+    Connect tasks to the change impacts they address for better traceability.
   </Accordion>
 </AccordionGroup>
