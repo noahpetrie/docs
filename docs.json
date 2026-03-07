@@ -3,9 +3,9 @@
   "theme": "luma",
   "name": "Leap Change Docs",
   "colors": {
-    "primary": "#9f35f8",
-    "dark": "#a031e8",
-    "light": "#ae7ff3"
+    "primary": "#0C8C5E",
+    "dark": "#086343",
+    "light": "#DDF3EA"
   },
   "navigation": {
     "groups": [
@@ -20,62 +20,78 @@
       {
         "group": "Features",
         "pages": [
-          {
-            "group": "Stakeholders",
-            "icon": "users",
-            "pages": [
-              "features/stakeholders"
-            ]
-          },
-          {
-            "group": "Change impacts",
-            "icon": "angles-right",
-            "pages": [
-              "features/change-impacts"
-            ]
-          },
-          {
-            "group": "Communications",
-            "icon": "envelope",
-            "pages": [
-              "features/communications"
-            ]
-          },
-          {
-            "group": "Surveys",
-            "icon": "square-poll-vertical",
-            "pages": [
-              "features/surveys"
-            ]
-          },
-          {
-            "group": "Programs",
-            "icon": "folder-tree",
-            "pages": [
-              "features/programs"
-            ]
-          },
-          {
-            "group": "Tasks",
-            "icon": "list-check",
-            "pages": [
-              "features/tasks"
-            ]
-          },
-          {
-            "group": "Reports",
-            "icon": "chart-pie",
-            "pages": [
-              "features/reports"
-            ]
-          },
-          {
-            "group": "AI assistant",
-            "icon": "sparkles",
-            "pages": [
-              "features/ai-assistant"
-            ]
-          }
+          "getting-started/introduction",
+          "getting-started/quickstart",
+          "getting-started/first-project"
+        ]
+      },
+      {
+        "group": "Stakeholders",
+        "pages": [
+          "stakeholders/overview",
+          "stakeholders/adding-stakeholders",
+          "stakeholders/groups",
+          "stakeholders/engagement",
+          "stakeholders/bulk-operations"
+        ]
+      },
+      {
+        "group": "Change Impacts",
+        "pages": [
+          "change-impacts/overview",
+          "change-impacts/creating-impacts",
+          "change-impacts/mitigation",
+          "change-impacts/ai-extraction"
+        ]
+      },
+      {
+        "group": "Surveys",
+        "pages": [
+          "surveys/overview",
+          "surveys/creating-surveys",
+          "surveys/sending-invitations",
+          "surveys/analyzing-results",
+          "surveys/readiness-scoring"
+        ]
+      },
+      {
+        "group": "Communications",
+        "pages": [
+          "communications/overview",
+          "communications/creating-plans",
+          "communications/adding-activities",
+          "communications/tracking"
+        ]
+      },
+      {
+        "group": "Tasks",
+        "pages": [
+          "tasks/overview"
+        ]
+      },
+      {
+        "group": "Reports",
+        "pages": [
+          "reports/overview",
+          "reports/impact-report",
+          "reports/stakeholder-map",
+          "reports/stakeholder-impact",
+          "reports/communication-preferences"
+        ]
+      },
+      {
+        "group": "AI Features",
+        "pages": [
+          "ai-features/overview"
+        ]
+      },
+      {
+        "group": "Settings",
+        "pages": [
+          "settings/overview",
+          "settings/integrations",
+          "settings/team-management",
+          "settings/billing"
         ]
       },
       {
@@ -90,8 +106,9 @@
   "interaction": {
     "drilldown": true
   },
-  "logo": "/logo/light.svg",
+  "logo": "/images/LeapChange-Green1.svg",
   "background": {
     "decoration": "gradient"
-  }
+  },
+  "favicon": "/images/outline.png"
 }

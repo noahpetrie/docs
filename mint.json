@@ -7,12 +7,12 @@
   },
   "favicon": "/favicon-16x16.png",
   "colors": {
-    "primary": "#6366f1",
-    "light": "#818cf8",
-    "dark": "#4f46e5",
+    "primary": "#9f35f8",
+    "light": "#ae7ff3",
+    "dark": "#a031e8",
     "anchors": {
-      "from": "#6366f1",
-      "to": "#818cf8"
+      "from": "#9f35f8",
+      "to": "#ae7ff3"
     }
   },
   "topbarLinks": [
@@ -25,12 +25,6 @@
     "name": "Open app",
     "url": "https://leapchange.io/home"
   },
-  "tabs": [
-    {
-      "name": "API Reference",
-      "url": "api-reference"
-    }
-  ],
   "anchors": [
     {
       "name": "Changelog",
@@ -38,57 +32,87 @@
       "url": "https://leapchange.io/changelog"
     },
     {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://leapchange.io"
-    },
-    {
       "name": "Contact",
       "icon": "envelope",
       "url": "https://leapchange.io/contact"
-    },
-    {
-      "name": "Blog",
-      "icon": "newspaper",
-      "url": "https://leapchange.io/blog"
     }
   ],
   "navigation": [
     {
-      "group": "Leap Change",
-      "pages": ["leap-change"]
-    },
-    {
-      "group": "Get Started",
+      "group": "Getting Started",
       "pages": [
-        "introduction",
-        "quickstart",
-        "development"
+        "getting-started/introduction",
+        "getting-started/quickstart",
+        "getting-started/first-project"
       ]
     },
     {
-      "group": "Essentials",
+      "group": "Stakeholders",
       "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets"
+        "stakeholders/overview",
+        "stakeholders/adding-stakeholders",
+        "stakeholders/groups",
+        "stakeholders/engagement",
+        "stakeholders/bulk-operations"
       ]
     },
     {
-      "group": "API Documentation",
+      "group": "Change Impacts",
       "pages": [
-        "api-reference/introduction"
+        "change-impacts/overview",
+        "change-impacts/creating-impacts",
+        "change-impacts/mitigation",
+        "change-impacts/ai-extraction"
       ]
     },
     {
-      "group": "Endpoint Examples",
+      "group": "Surveys",
       "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
+        "surveys/overview",
+        "surveys/creating-surveys",
+        "surveys/sending-invitations",
+        "surveys/analyzing-results",
+        "surveys/readiness-scoring"
+      ]
+    },
+    {
+      "group": "Communications",
+      "pages": [
+        "communications/overview",
+        "communications/creating-plans",
+        "communications/adding-activities",
+        "communications/tracking"
+      ]
+    },
+    {
+      "group": "Tasks",
+      "pages": [
+        "tasks/overview"
+      ]
+    },
+    {
+      "group": "Reports",
+      "pages": [
+        "reports/overview",
+        "reports/impact-report",
+        "reports/stakeholder-map",
+        "reports/stakeholder-impact",
+        "reports/communication-preferences"
+      ]
+    },
+    {
+      "group": "AI Features",
+      "pages": [
+        "ai-features/overview"
+      ]
+    },
+    {
+      "group": "Settings",
+      "pages": [
+        "settings/overview",
+        "settings/integrations",
+        "settings/team-management",
+        "settings/billing"
       ]
     }
   ],

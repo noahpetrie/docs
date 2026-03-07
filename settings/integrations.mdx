@@ -1,0 +1,138 @@
+---
+title: Integrations
+description: Connect Leap Change with external services
+---
+
+Leap Change integrates with external platforms to streamline your workflow and keep data synchronized.
+
+## Microsoft 365
+
+Connect to Microsoft 365 (Azure AD / Entra ID) to sync users as stakeholders.
+
+### Connecting
+
+1. Go to **Settings** → **Integrations**
+2. Click **Connect Microsoft 365**
+3. Sign in with your Microsoft admin account
+4. Grant required permissions
+5. Connection is established
+
+### Required permissions
+
+The integration requests:
+
+- Read user profiles
+- Read group memberships
+- Send mail (for notifications)
+
+<Note>
+  Admin consent may be required depending on your organization's policies.
+</Note>
+
+### Stakeholder sync
+
+Once connected, configure how users sync to stakeholders:
+
+#### Sync frequency
+
+| Option | Description |
+|--------|-------------|
+| Manual | Sync only when you click the button |
+| Daily | Automatic sync once per day |
+| Twice daily | Sync morning and evening |
+| Weekly | Sync once per week |
+
+#### Merge strategy
+
+When a synced user already exists as a stakeholder:
+
+| Strategy | Behavior |
+|----------|----------|
+| Entra wins | Microsoft data overwrites Leap Change data |
+| Leap wins | Keep existing Leap Change data |
+| Skip conflicts | Don't update conflicting records |
+
+#### Group filtering
+
+Limit sync to specific Entra ID groups:
+
+1. Click **Configure Groups**
+2. Select which groups to include
+3. Only members of selected groups will sync
+
+#### Group sync
+
+Optionally sync Entra groups as stakeholder groups:
+
+- Creates matching groups in Leap Change
+- Maintains membership automatically
+- Updates on each sync
+
+### Viewing sync status
+
+The integration page shows:
+
+- Last sync time
+- Records synced
+- Any errors encountered
+- Sync history log
+
+## Microsoft Teams
+
+Send messages and monitor Teams channels for change-related discussions.
+
+### Connecting
+
+1. In **Settings** → **Integrations**, find Microsoft Teams
+2. Click **Connect**
+3. Authorize the Teams bot
+4. Select default channels (optional)
+
+### Features
+
+#### Direct messages
+
+Send messages to stakeholders via Teams:
+
+- From stakeholder profiles
+- As part of communication activities
+- For survey invitations
+
+#### Channel monitoring
+
+Monitor channels for change-related discussions:
+
+- Configure keywords to watch
+- Receive notifications when mentioned
+- Capture insights for impact analysis
+
+### Teams bot
+
+The Leap Change bot can:
+
+- Respond to queries about changes
+- Provide stakeholder lookup
+- Send scheduled notifications
+- Support interactive workflows
+
+## Troubleshooting
+
+### Connection issues
+
+If integration fails:
+
+1. Check admin permissions
+2. Verify network access to Microsoft services
+3. Re-authorize if tokens expired
+4. Contact support if issues persist
+
+### Sync errors
+
+Common sync issues:
+
+| Error | Solution |
+|-------|----------|
+| User not found | User may have been deleted in Entra |
+| Permission denied | Check app permissions in Azure |
+| Rate limited | Wait and retry automatically |
+| Invalid data | Check user profile completeness |

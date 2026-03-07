@@ -1,106 +1,95 @@
 ---
-title: Quickstart
-description: Get up and running with Leap Change in minutes
-icon: play
+title: Quick start
+description: Get up and running with Leap Change in 5 minutes
 ---
 
 This guide walks you through setting up your first change initiative in Leap Change.
 
 ## Prerequisites
 
-- A Leap Change account (sign up at [app.leapchange.io](https://app.leapchange.io))
+- A Leap Change account (sign up at [leapchange.io](https://leapchange.io))
 - Basic information about your change initiative
 
 ## Step 1: Create your organization
 
-When you first sign up, you'll be prompted to create your organization:
+When you first sign up, Leap Change automatically creates an organization for you. You'll be prompted to:
 
-1. Enter your organization name
-2. Invite team members (optional)
-3. Click **Create organization**
+1. **Name your organization** - Choose a name that reflects your company or team
+2. **Set your role** - Define your position (e.g., Change Manager, Project Lead)
 
-<Note>
-  You can invite additional team members later from the organization settings.
-</Note>
+## Step 2: Create a project
 
-## Step 2: Create a program (optional)
+1. Navigate to **Projects** from the sidebar
+2. Click **New Project**
+3. Follow the guided wizard:
+   - **Describe the change** - What is changing and why?
+   - **Classify** - Select change type and priority
+   - **Set timeline** - Define start and target dates
+   - **Plan transition** - Outline your approach
+4. Click **Create** to launch your project
 
-Programs help you group related initiatives:
+## Step 3: Add stakeholders
 
-1. Navigate to **Programs** in the sidebar
-2. Click **New program**
-3. Enter a name and description
-4. Click **Create**
+You can add stakeholders in two ways:
 
-## Step 3: Create your first initiative
+<Tabs>
+  <Tab title="Manual entry">
+    1. Go to **Stakeholders** in the sidebar
+    2. Click **Add Stakeholder**
+    3. Fill in details:
+       - Name and contact information
+       - Department and role
+       - Influence and support levels
+    4. Assign to your project
+  </Tab>
+  <Tab title="CSV import">
+    1. Go to **Stakeholders** in the sidebar
+    2. Click **Import** → **CSV**
+    3. Upload your CSV file with stakeholder data
+    4. Map columns to fields
+    5. Review and confirm import
+  </Tab>
+</Tabs>
 
-1. Go to the **Dashboard**
-2. Click **New initiative**
-3. Fill in the initiative details:
-   - **Name**: A clear, descriptive title
-   - **Description**: Overview of what the initiative involves
-   - **Status**: Current phase (planning, active, completed)
-   - **Program**: Optionally link to a program
-4. Click **Create initiative**
+## Step 4: Document change impacts
 
-## Step 4: Add stakeholders
-
-Identify the people affected by or involved in your change:
-
-1. Go to **Stakeholders** in the sidebar
-2. Click **Add stakeholder**
-3. Enter stakeholder details:
-   - Name and contact information
-   - Role and department
-   - Influence level (high/medium/low)
-   - Support level (supporter/neutral/resistant)
-4. Click **Save**
+1. Navigate to **Change Impacts**
+2. Click **Add Impact**
+3. Describe the impact:
+   - **Title** - Brief description
+   - **Current state** - How things work today
+   - **Future state** - How things will work after the change
+   - **Severity** - High, Medium, or Low
+4. Link affected stakeholders
+5. Save the impact
 
 <Tip>
-  You can import stakeholders in bulk using CSV upload.
+  Use AI transcript extraction to automatically identify change impacts from meeting notes. Upload a transcript file and Leap Change will suggest impacts for your review.
 </Tip>
 
-## Step 5: Log change impacts
+## Step 5: Assess readiness
 
-Document how the change will affect your organization:
-
-1. Navigate to **Change impacts**
-2. Click **Add impact**
-3. Describe the impact:
-   - **Title**: Brief summary
-   - **Category**: People, process, technology, etc.
-   - **Severity**: Critical, high, medium, low
-   - **Current state**: How things work today
-   - **Future state**: How things will work after the change
-   - **Affected stakeholders**: Who is impacted
-4. Click **Save**
-
-## Step 6: Plan communications
-
-Create a communication plan for your stakeholders:
-
-1. Go to **Communications**
-2. Click **New plan**
-3. Define your communication activities:
-   - Target audience
-   - Message content
-   - Delivery channel
-   - Schedule
-4. Click **Create plan**
+1. Go to **Surveys**
+2. Create a new survey:
+   - Choose **Quick survey** for a single question
+   - Choose **Comprehensive survey** for detailed assessment
+3. Select stakeholders to survey
+4. Send invitations
+5. Monitor responses in real-time
 
 ## Next steps
 
 <CardGroup cols={2}>
-  <Card title="Stakeholder management" icon="users" href="/features/stakeholders">
+  <Card title="Stakeholder management" icon="users" href="/stakeholders/overview">
     Learn advanced stakeholder tracking
   </Card>
-  <Card title="Change impact analysis" icon="angles-right" href="/features/change-impacts">
-    Deep dive into impact assessment
+  <Card title="Communication planning" icon="comments" href="/communications/overview">
+    Plan stakeholder communications
   </Card>
-  <Card title="AI assistant" icon="sparkles" href="/features/ai-assistant">
-    Use AI to enhance your analysis
+  <Card title="AI features" icon="sparkles" href="/ai-features/overview">
+    Leverage AI for faster insights
   </Card>
-  <Card title="Surveys" icon="square-poll-vertical" href="/features/surveys">
-    Gather stakeholder feedback
+  <Card title="Reports" icon="chart-bar" href="/reports/overview">
+    Visualize your change data
   </Card>
 </CardGroup>
