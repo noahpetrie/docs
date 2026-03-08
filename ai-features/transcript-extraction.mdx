@@ -1,0 +1,101 @@
+---
+title: Transcript extraction
+description: Automatically extract change impacts from meeting transcripts using AI
+---
+
+Upload meeting transcripts and let AI automatically identify potential change impacts, saving hours of manual analysis.
+
+## Supported file formats
+
+Leap Change accepts transcripts in these formats:
+
+| Format | Extension | Source |
+|--------|-----------|--------|
+| WebVTT | .vtt | Microsoft Teams, Zoom, Google Meet |
+| Word document | .docx | Manual transcription, Word exports |
+| Plain text | .txt | Any text export |
+| PDF | .pdf | Exported documents |
+
+Maximum file size: 10 MB
+
+## Extraction process
+
+### Step 1: Upload your transcript
+
+1. Navigate to **Change Impacts**
+2. Click **Import** → **From Transcript**
+3. Choose your upload method:
+   - **File upload** - Drag and drop or select a file
+   - **Paste text** - Copy and paste transcript content directly
+4. Select the associated project
+
+### Step 2: AI processing
+
+Once uploaded, Leap Change's AI:
+
+1. Parses the transcript content
+2. Identifies statements about changes, impacts, and concerns
+3. Extracts current and future state descriptions
+4. Suggests appropriate severity levels
+5. Groups related mentions together
+
+Processing typically takes 30-60 seconds depending on transcript length.
+
+### Step 3: Review extracted impacts
+
+You'll see a list of AI-suggested impacts:
+
+- **Title** - Generated summary of the impact
+- **Description** - Details extracted from the discussion
+- **Confidence** - AI confidence level in the extraction
+- **Source quote** - The original transcript excerpt
+
+### Step 4: Accept, edit, or reject
+
+For each suggested impact:
+
+| Action | When to use |
+|--------|-------------|
+| **Accept** | Impact is accurate and complete |
+| **Edit and accept** | Needs refinement before saving |
+| **Reject** | Not a valid impact or not relevant |
+| **Merge** | Duplicate of an existing impact |
+
+## Best practices
+
+<AccordionGroup>
+  <Accordion title="Use high-quality transcripts">
+    Automated transcription services may have errors. Review and correct obvious mistakes before uploading for better results.
+  </Accordion>
+  <Accordion title="Include context in meetings">
+    Train your team to use phrases like "this change will affect..." or "the impact on..." during discussions to help AI identification.
+  </Accordion>
+  <Accordion title="Select the correct project">
+    Choosing the right project helps the AI filter relevant impacts and provides better context for extraction.
+  </Accordion>
+  <Accordion title="Review all suggestions">
+    Always review AI suggestions before accepting. The AI may suggest duplicates, miss context, or misinterpret discussions.
+  </Accordion>
+</AccordionGroup>
+
+## Example extraction
+
+**Transcript excerpt:**
+> "With the new CRM system, the sales team will need to enter customer data differently. Currently they use spreadsheets, but after go-live they'll need to use the contact management module. This is a significant change for the 50 sales reps."
+
+**AI-extracted impact:**
+- **Title**: Sales team adopts CRM contact management module
+- **Current state**: Sales team uses spreadsheets for customer data entry
+- **Future state**: Sales team uses CRM contact management module
+- **Severity**: High (50 affected users, significant workflow change)
+- **Category**: Process, Technology
+
+## Usage and quotas
+
+Transcript extraction consumes AI usage quota:
+
+- Each extraction counts as one AI request
+- Usage resets monthly based on your billing cycle
+- Track usage in **Settings** → **AskLeap Usage**
+
+See [AI features overview](/ai-features/overview) for quota details by plan.
