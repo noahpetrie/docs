@@ -1,0 +1,202 @@
+---
+title: Slack integration
+description: Connect Slack to sync workspace members and send messages
+---
+
+Integrate with Slack to import workspace members as stakeholders and communicate directly through Slack DMs.
+
+## Overview
+
+The Slack integration provides:
+
+- **Stakeholder import** from your Slack workspace
+- **Direct messaging** for surveys and notifications
+- **Notification channels** for automated alerts
+
+## Connecting Slack
+
+### Prerequisites
+
+- Slack workspace admin access
+- Permission to install apps in your workspace
+
+### Connection steps
+
+1. Go to **Settings** → **Integrations**
+2. Click **Connect Slack**
+3. Select your Slack workspace
+4. Review and approve permissions
+5. Click **Allow** to complete connection
+
+### Required permissions
+
+The Slack app requests:
+
+| Permission | Purpose |
+|------------|----------|
+| users:read | Import workspace members |
+| users:read.email | Access member email addresses |
+| chat:write | Send direct messages |
+| channels:read | List available channels |
+
+## Stakeholder import
+
+Import Slack workspace members as stakeholders.
+
+### Running an import
+
+1. Navigate to **Settings** → **Integrations** → **Slack**
+2. Click **Import Members**
+3. Review the member list
+4. Select members to import or click **Import All**
+5. Confirm the import
+
+### Mapped attributes
+
+| Slack field | Stakeholder field |
+|-------------|-------------------|
+| real_name | Name |
+| email | Email |
+| title | Job role |
+| profile.phone | Phone |
+| profile.image_192 | Profile photo |
+
+### Handling existing stakeholders
+
+If a Slack member's email matches an existing stakeholder:
+
+- Records are linked via external ID
+- Choose to update existing data or skip
+- Prevents duplicate stakeholder entries
+
+### Re-importing
+
+Run import again to:
+
+- Add new workspace members
+- Update changed profile information
+- Previously imported members are updated, not duplicated
+
+## Slack messaging
+
+Send direct messages to stakeholders through Slack.
+
+### Sending messages
+
+From a stakeholder profile:
+
+1. Click **Send Slack Message**
+2. Compose your message
+3. Click **Send**
+
+The message appears as a DM from the Leap Change Slack app.
+
+### Survey invitations
+
+Distribute surveys via Slack:
+
+1. Create a survey
+2. Select recipients
+3. Choose **Slack** as delivery method
+4. Send invitations
+
+Recipients receive a Slack DM with a survey link.
+
+### Bulk messaging
+
+Send messages to multiple stakeholders:
+
+1. Select stakeholders in the list view
+2. Click **Send Slack Message**
+3. Compose a single message
+4. Send to all selected recipients
+
+### Message tracking
+
+All Slack messages are logged:
+
+- View sent messages in activity logs
+- Track delivery status
+- Monitor survey response rates
+
+## Notification channels
+
+Configure Slack channels for automated notifications.
+
+### Setting up notifications
+
+1. Go to **Settings** → **Integrations** → **Slack**
+2. Click **Configure Notifications**
+3. Select a Slack channel
+4. Choose notification types to receive
+5. Save configuration
+
+### Available notifications
+
+| Notification type | Description |
+|-------------------|-------------|
+| Survey responses | Alert when surveys are completed |
+| Impact updates | Changes to impact severity or status |
+| Stakeholder changes | New stakeholders or profile updates |
+| Task completions | Tasks marked as done |
+
+### Managing channels
+
+- Add multiple channels for different notification types
+- Remove channels to stop notifications
+- The Leap Change app must be invited to private channels
+
+## Troubleshooting
+
+### Connection issues
+
+**Problem**: Cannot connect to Slack
+
+- Verify you have workspace admin permissions
+- Check that your workspace allows app installations
+- Ensure the Slack app isn't blocked by workspace policies
+
+**Problem**: Connection expired
+
+- Slack tokens can expire
+- Reconnect by clicking **Reconnect** in integration settings
+
+### Import issues
+
+| Error | Solution |
+|-------|----------|
+| No members found | Check users:read permission is granted |
+| Missing emails | users:read.email permission may be required |
+| User skipped | User may be a guest or deactivated |
+
+### Messaging issues
+
+**Problem**: Messages not delivered
+
+- Verify the stakeholder has a Slack account in your workspace
+- Check that their Slack account is active
+- Ensure chat:write permission is granted
+
+**Problem**: Channel notifications not working
+
+- Invite the Leap Change app to the channel
+- Verify the channel hasn't been archived
+- Check notification settings are saved
+
+## Disconnecting
+
+To remove the Slack integration:
+
+1. Go to **Settings** → **Integrations** → **Slack**
+2. Click **Disconnect**
+3. Confirm disconnection
+
+<Warning>
+  Disconnecting removes messaging capability but does not delete previously imported stakeholder data.
+</Warning>
+
+You can also remove the Leap Change app from your Slack workspace:
+
+1. Go to your Slack workspace settings
+2. Navigate to **Apps**
+3. Find Leap Change and click **Remove**

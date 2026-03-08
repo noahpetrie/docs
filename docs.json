@@ -86,6 +86,14 @@
         ]
       },
       {
+        "group": "Integrations",
+        "pages": [
+          "integrations/overview",
+          "integrations/microsoft-365",
+          "integrations/slack"
+        ]
+      },
+      {
         "group": "Settings",
         "pages": [
           "settings/overview",
