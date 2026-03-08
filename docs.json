@@ -18,11 +18,19 @@
         ]
       },
       {
-        "group": "Features",
+        "group": "Programs",
         "pages": [
-          "getting-started/introduction",
-          "getting-started/quickstart",
-          "getting-started/first-project"
+          "programs/overview",
+          "programs/creating-programs",
+          "programs/managing-programs"
+        ]
+      },
+      {
+        "group": "Projects",
+        "pages": [
+          "projects/overview",
+          "projects/creating-projects",
+          "projects/project-settings"
         ]
       },
       {
@@ -36,7 +44,7 @@
         ]
       },
       {
-        "group": "Change Impacts",
+        "group": "Change impacts",
         "pages": [
           "change-impacts/overview",
           "change-impacts/creating-impacts",
@@ -80,7 +88,7 @@
         ]
       },
       {
-        "group": "AI Features",
+        "group": "AI features",
         "pages": [
           "ai-features/overview"
         ]
@@ -89,7 +97,14 @@
         "group": "Settings",
         "pages": [
           "settings/overview",
-          "settings/integrations",
+          {
+            "group": "Integrations",
+            "pages": [
+              "settings/integrations/overview",
+              "settings/integrations/microsoft",
+              "settings/integrations/slack"
+            ]
+          },
           "settings/team-management",
           "settings/billing"
         ]
