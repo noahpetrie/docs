@@ -1,0 +1,156 @@
+---
+title: Microsoft 365 integration
+description: Connect to Microsoft 365 for user sync and Teams messaging
+---
+
+Connect Leap Change to Microsoft 365 to sync users from Entra ID (Azure AD) as stakeholders and send messages via Microsoft Teams.
+
+## Features
+
+### Entra ID user sync
+
+- Import users as stakeholders
+- Sync profile information (name, email, department, job title)
+- Keep data synchronized automatically
+- Import organizational hierarchy
+
+### Microsoft Teams messaging
+
+- Send direct messages to stakeholders
+- Deliver survey invitations via Teams
+- Channel monitoring for change discussions
+- Interactive bot conversations
+
+## Connecting Microsoft 365
+
+1. Go to **Settings** > **Integrations**
+2. Click on **Microsoft 365**
+3. Click **Connect**
+4. Sign in with your Microsoft admin account
+5. Review and grant permissions
+6. Connection is established
+
+## Required permissions
+
+The integration requests these Microsoft Graph permissions:
+
+| Permission | Purpose |
+|------------|----------|
+| **User.Read.All** | Read user profiles |
+| **Group.Read.All** | Read group memberships |
+| **Mail.Send** | Send email notifications |
+| **Chat.ReadWrite** | Send Teams messages |
+
+<Note>
+  Your Microsoft 365 admin may need to grant consent for the application depending on organizational policies.
+</Note>
+
+## Configuring user sync
+
+### Sync frequency
+
+Choose how often to sync users:
+
+| Option | Description |
+|--------|-------------|
+| **Manual** | Sync only when you click the button |
+| **Daily** | Automatic sync once per day |
+| **Twice daily** | Sync morning and evening |
+| **Weekly** | Sync once per week |
+
+### Merge strategy
+
+When a synced user already exists as a stakeholder:
+
+| Strategy | Behavior |
+|----------|----------|
+| **Entra wins** | Microsoft data overwrites Leap Change data |
+| **Leap wins** | Keep existing Leap Change data |
+| **Skip conflicts** | Don't update conflicting records |
+
+### Group filtering
+
+Limit sync to specific Entra ID groups:
+
+1. Click **Configure Groups**
+2. Select which groups to include
+3. Only members of selected groups will sync
+
+This is useful when you don't want to import all organization users.
+
+### Group sync
+
+Optionally sync Entra groups as stakeholder groups:
+
+- Creates matching groups in Leap Change
+- Maintains membership automatically
+- Updates on each sync
+
+## Using Teams messaging
+
+### Sending direct messages
+
+Send a message to a stakeholder via Teams:
+
+1. Open the stakeholder profile
+2. Click **Send Teams message**
+3. Compose your message
+4. Click **Send**
+
+<Note>
+  The stakeholder must be synced from Entra ID and have a Teams account.
+</Note>
+
+### Channel monitoring
+
+Monitor Teams channels for change-related discussions:
+
+1. Go to integration settings
+2. Click **Configure channels**
+3. Add channels to monitor
+4. Set keywords to watch for
+
+When keywords are mentioned, you'll receive notifications in Leap Change.
+
+## Viewing sync status
+
+The integration page shows:
+
+| Metric | Description |
+|--------|-------------|
+| **Last sync** | When sync last ran |
+| **Records synced** | Users imported or updated |
+| **Errors** | Any sync failures |
+| **Sync history** | Log of recent syncs |
+
+## Troubleshooting
+
+### Connection failed
+
+1. Verify you have Microsoft 365 admin rights
+2. Check if consent is blocked by policies
+3. Try disconnecting and reconnecting
+
+### Users not syncing
+
+1. Verify users are in the selected groups
+2. Check sync frequency settings
+3. Look for errors in sync history
+
+### Teams messages not delivered
+
+1. Confirm stakeholder has a Teams account
+2. Verify the stakeholder was synced from Entra
+3. Check if external messaging is allowed
+
+## Disconnecting
+
+To remove the Microsoft 365 connection:
+
+1. Go to the integration settings
+2. Click **Disconnect**
+3. Confirm the action
+
+<Warning>
+  Disconnecting stops all syncs. Previously synced stakeholders remain but won't receive updates.
+</Warning>
