@@ -115,6 +115,89 @@ The Leap Change bot can:
 - Send scheduled notifications
 - Support interactive workflows
 
+## Slack
+
+Connect your Slack workspace to communicate with stakeholders and import users.
+
+### Connecting
+
+1. Go to **Settings** → **Integrations**
+2. Find Slack in the integrations list
+3. Click **Connect**
+4. Sign in to your Slack workspace
+5. Authorize the Leap Change app
+6. Select channels to enable (optional)
+
+### Required permissions
+
+The Slack integration requests:
+
+- Read workspace users
+- Send messages to users
+- Post to channels
+- Read channel history
+
+<Note>
+  Workspace admin approval may be required depending on your Slack settings.
+</Note>
+
+### Features
+
+#### Stakeholder sync
+
+Import users from your Slack workspace as stakeholders:
+
+1. Navigate to the Slack integration settings
+2. Click **Sync Stakeholders**
+3. Review the import preview
+4. Confirm to import users
+
+Synced data includes:
+
+- Display name
+- Email address
+- Profile photo
+- Job title (if set in Slack)
+
+#### Direct messages
+
+Send messages to stakeholders directly in Slack:
+
+- From stakeholder profile pages
+- As part of survey invitations
+- For communication activities
+
+#### Channel integration
+
+Connect Slack channels to your change initiatives:
+
+- Select channels for announcements
+- Monitor channels for feedback
+- Track engagement metrics
+
+### Managing the connection
+
+#### Viewing status
+
+The integration page displays:
+
+- Connection status
+- Connected workspace name
+- Last sync time
+- Available channels
+
+#### Disconnecting
+
+To remove the Slack integration:
+
+1. Go to **Settings** → **Integrations** → **Slack**
+2. Click **Disconnect**
+3. Confirm the disconnection
+
+<Warning>
+  Disconnecting removes the ability to send Slack messages but does not delete previously synced stakeholders.
+</Warning>
+
 ## Troubleshooting
 
 ### Connection issues
@@ -122,7 +205,7 @@ The Leap Change bot can:
 If integration fails:
 
 1. Check admin permissions
-2. Verify network access to Microsoft services
+2. Verify network access to external services
 3. Re-authorize if tokens expired
 4. Contact support if issues persist
 
@@ -132,7 +215,15 @@ Common sync issues:
 
 | Error | Solution |
 |-------|----------|
-| User not found | User may have been deleted in Entra |
-| Permission denied | Check app permissions in Azure |
+| User not found | User may have been deleted |
+| Permission denied | Check app permissions |
 | Rate limited | Wait and retry automatically |
 | Invalid data | Check user profile completeness |
+
+### Slack-specific issues
+
+| Issue | Solution |
+|-------|----------|
+| Cannot find workspace | Ensure you're signed into the correct Slack workspace |
+| Message not delivered | Verify the user hasn't left the workspace |
+| Channel not visible | Invite the Leap Change bot to the channel |
