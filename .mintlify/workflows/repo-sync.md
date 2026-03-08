@@ -1,8 +1,7 @@
 ---
 name: "Repo sync"
 on:
-  push:
-    - repo: "noahpetrie/leap-change"
+  cron: "0 0 * * 1"
 ---
 
-Please analuze the code base and create all the required pages and docs needed by end users to user the product.
+Please review the changes and make the appropriate changes to the documents.
