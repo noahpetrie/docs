@@ -20,9 +20,14 @@
       {
         "group": "Features",
         "pages": [
-          "getting-started/introduction",
-          "getting-started/quickstart",
-          "getting-started/first-project"
+          "features/programs",
+          "features/stakeholders",
+          "features/change-impacts",
+          "features/surveys",
+          "features/communications",
+          "features/tasks",
+          "features/reports",
+          "features/ai-assistant"
         ]
       },
       {
@@ -89,6 +94,8 @@
         "group": "Settings",
         "pages": [
           "settings/overview",
+          "settings/profile",
+          "settings/security",
           "settings/integrations",
           "settings/team-management",
           "settings/billing"
@@ -98,7 +105,9 @@
         "group": "Guides",
         "pages": [
           "guides/organization-setup",
-          "guides/import-export"
+          "guides/import-export",
+          "guides/keyboard-shortcuts",
+          "guides/home-dashboard"
         ]
       }
     ]
