@@ -17,15 +17,16 @@ Bulk import stakeholders from a CSV file.
 
 | Column | Required | Description |
 |--------|----------|-------------|
-| name | Yes | Full name |
-| email | Yes | Email address |
+| first_name | Yes | Stakeholder's first name |
+| last_name | Yes | Stakeholder's last name |
+| email | No | Email address (used for duplicate detection) |
 | role | No | Job title |
 | department | No | Department/team |
 | phone | No | Phone number |
 | location | No | Office location |
-| influence | No | high/medium/low |
-| support | No | champion/supporter/neutral/resistant |
-| interest | No | high/medium/low |
+| influence | No | High, Medium, or Low |
+| support_level | No | Current stance on change |
+| interest | No | High, Medium, or Low |
 | external_id | No | ID from external system |
 
 3. Save as UTF-8 encoded CSV
